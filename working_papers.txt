@@ -6,9 +6,11 @@ Does Greater Disaggregation and Comparability of Income Tax Disclosures Reduce A
 Link:
 
 More Risk, More Reward: The Role of Tenant Concentration in Shaping Equity-Based Compensation
+This study examines how tenant concentration risk influences CEO compensation design. We find that boards of listed equity Real Estate Investment Trusts (REITs) with concentrated property portfolios design CEO pay packages to encourage risk-taking. These incentives help mitigate moral hazard concerns between risk-averse CEOs and diversified shareholders. The positive relationship between tenant concentration and risk-taking incentives awarded to CEOs holds after accounting for potential reverse causality. The effect is amplified when the concentrated tenant base comprises smaller and less profitable firms. The findings are attenuated when REITs have poor growth prospects. These incentives are followed by greater firm risk-taking: CEOs with higher Vega subsequently exhibit higher systematic risk and leverage and steer their portfolios toward greater concentration. Our findings suggest that REIT boards account for moral hazard and risk alignment in compensation design, moving beyond generic market-based risks to firm- and tenant-specific considerations.
 Link:
 
 When Dividends Deceive: Mispricing in Public Real Estate Markets
+We investigate the free dividends fallacy in equity Real Estate Investment Trusts (REITs). The mandatory REIT payout requirement renders the propensity to pay dividends exogenous to firm quality, isolating behavioral preferences from rational quality signaling. Using a comprehensive panel of REIT dividend events from 1980 to 2023, we find that REIT returns are elevated in predicted dividend months, consistent with price pressure from dividend-seeking investors. Dividend-window returns are positively related to dividend yield, negatively related to interest rates, and negatively related to past market performance. These price patterns subsequently reverse, and insiders trade strategically to exploit the predictable mispricing. These results hold among REITs that would be least likely to pay dividends absent regulatory requirements, consistent with the presence of a free dividends fallacy.
 Link:
 
 Checkbook Charity: What Really Drives Corporate Giving Decisions
