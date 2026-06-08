@@ -1,0 +1,15 @@
+Commercial Real Estate AI Text-Evaluation (CREATE): News-Based Signals for Predicting REIT Returns
+We introduce the Commercial Real Estate AI Text-Evaluation (CREATE) score, a sector-level trading signal extracted from Wall Street Journal articles using large language models (LLMs). Unlike traditional natural language processing (NLP) methods based on dictionaries or supervised classifiers, CREATE leverages the contextual reasoning of LLMs to identify relevant information from unstructured text. We apply a filtering technique to mitigate forward-looking bias that afflicts LLMs (Engelberg et al., 2025). A sector-rotation strategy that goes long (short) REIT sectors with high (low) CREATE scores generates an annualized alpha of 6 percent and performs especially well during recessions. Comparing three models, we find that models with more advanced contextual reasoning yield much stronger predictive signals. The results highlight the value of LLM-based text analysis for real estate investment and asset pricing.
+Link: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887322
+
+Does Greater Disaggregation and Comparability of Income Tax Disclosures Reduce Analysts' Forecast Errors
+Link:
+
+More Risk, More Reward: The Role of Tenant Concentration in Shaping Equity-Based Compensation
+Link:
+
+When Dividends Deceive: Mispricing in Public Real Estate Markets
+Link:
+
+Checkbook Charity: What Really Drives Corporate Giving Decisions
+Link:
