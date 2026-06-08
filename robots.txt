@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pratik-kothari.com/sitemap.xml
