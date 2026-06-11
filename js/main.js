@@ -20,12 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
-  // Auto-update copyright year
-  var yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
 });
 
 // Abstract expand/collapse
