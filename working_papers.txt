@@ -10,6 +10,7 @@ This study examines how tenant concentration risk influences CEO compensation de
 Link:
 
 When Dividends Deceive: Mispricing in Public Real Estate Markets
+Revise and Resubmit at The Journal of Real Estate Finance and Economics.
 We investigate the free dividends fallacy in equity Real Estate Investment Trusts (REITs). The mandatory REIT payout requirement renders the propensity to pay dividends exogenous to firm quality, isolating behavioral preferences from rational quality signaling. Using a comprehensive panel of REIT dividend events from 1980 to 2023, we find that REIT returns are elevated in predicted dividend months, consistent with price pressure from dividend-seeking investors. Dividend-window returns are positively related to dividend yield, negatively related to interest rates, and negatively related to past market performance. These price patterns subsequently reverse, and insiders trade strategically to exploit the predictable mispricing. These results hold among REITs that would be least likely to pay dividends absent regulatory requirements, consistent with the presence of a free dividends fallacy.
 Link:
 
