@@ -1,3 +1,7 @@
+Do the enhanced disclosures under ASU 2023-09 improve analysts' ability to forecast ETRs and affect investors' valuation of tax expense?
+With Casey Schwab, Bridget Stomberg, and Brian Williams.
+Link:
+
 Commercial Real Estate AI Text-Evaluation (CREATE): News-Based Signals for Predicting REIT Returns
 We introduce the Commercial Real Estate AI Text-Evaluation (CREATE) score, a sector-level trading signal extracted from Wall Street Journal articles using large language models (LLMs). Unlike traditional natural language processing (NLP) methods based on dictionaries or supervised classifiers, CREATE leverages the contextual reasoning of LLMs to identify relevant information from unstructured text. We apply a filtering technique to mitigate forward-looking bias that afflicts LLMs (Engelberg et al., 2025). A sector-rotation strategy that goes long (short) REIT sectors with high (low) CREATE scores generates an annualized alpha of 6 percent and performs especially well during recessions. Comparing three models, we find that models with more advanced contextual reasoning yield much stronger predictive signals. The results highlight the value of LLM-based text analysis for real estate investment and asset pricing.
 Link: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887322
