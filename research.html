@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5FJ16B7HM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Z5FJ16B7HM');
-  </script>
+  <script src="js/analytics.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | Pratik Kothari</title>
@@ -26,37 +19,50 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-name">Pratik Kothari</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navigation-links">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
           <line x1="3" y1="12" x2="21" y2="12"/>
           <line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navigation-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="research.html" class="active" aria-current="page">Research</a></li>
         <li><a href="data-code.html">Data &amp; Code</a></li>
+        <li><a href="files/kothari_cv.pdf" target="_blank" rel="noopener">CV</a></li>
       </ul>
     </div>
   </nav>
 
-  <main>
-    <div class="container">
+  <main id="main-content">
+    <div class="container research-container">
 
       <div class="page-header">
+        <p class="eyebrow">Questions &amp; evidence</p>
         <h1>Research</h1>
+        <p>My working papers and publications explore how information, incentives, and institutions shape the decisions of firms and investors.</p>
       </div>
+      <nav aria-label="Research sections">
+        <ul class="section-nav">
+          <li><a href="#working-papers">Working papers <span aria-hidden="true">&darr;</span></a></li>
+          <li><a href="#publications">Publications <span aria-hidden="true">&darr;</span></a></li>
+        </ul>
+      </nav>
 
       <!-- ═══════════════════════════════════════════
            WORKING PAPERS
            ═══════════════════════════════════════════ -->
-      <section class="papers-section">
-        <h2 class="papers-section-title">Working Papers</h2>
+      <section class="papers-section" id="working-papers" aria-labelledby="working-papers-title">
+        <header class="papers-section-header">
+          <h2 class="papers-section-title" id="working-papers-title">Working Papers</h2>
+          <span class="papers-count">6 papers</span>
+        </header>
 
         <div class="paper-card">
           <h3 class="paper-title">Dissecting REIT Return Comovement</h3>
@@ -72,7 +78,7 @@
         </div>
 
         <div class="paper-card">
-          <h3 class="paper-title">Do the enhanced disclosures under ASU 2023-09 improve analysts&rsquo; ability to forecast ETRs and affect investors&rsquo; valuation of tax expense?</h3>
+          <h3 class="paper-title">Do the enhanced disclosures under ASU 2023-09 improve ETR forecasts?</h3>
           <p class="paper-authors">with Casey Schwab, Bridget Stomberg, and Brian Williams</p>
           <div class="paper-actions">
             <button class="abstract-toggle" onclick="toggleAbstract(this)">
@@ -144,8 +150,11 @@
       <!-- ═══════════════════════════════════════════
            PUBLICATIONS
            ═══════════════════════════════════════════ -->
-      <section class="papers-section">
-        <h2 class="papers-section-title">Publications</h2>
+      <section class="papers-section" id="publications" aria-labelledby="publications-title">
+        <header class="papers-section-header">
+          <h2 class="papers-section-title" id="publications-title">Publications</h2>
+          <span class="papers-count">9 papers</span>
+        </header>
 
         <div class="paper-card">
           <h3 class="paper-title">Board Quality and the Public Purse: A Study of Government Subsidies and Corporate Governance</h3>

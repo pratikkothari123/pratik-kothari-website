@@ -1,0 +1,379 @@
+%
+% Pratik Kothari — Academic CV
+% Based on Academic CV Template by Dubasi Pavan Kumar (MIT License)
+% Reconstructed against the authoritative website PDF, September 2026.
+% The website PDF controls content, contacts, numbering, and omitted references.
+% Compile: pdflatex kothari_cv.tex (run twice for page count)
+%
+
+\documentclass[letterpaper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{lastpage}
+\usepackage{booktabs}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyfoot[C]{\footnotesize Pratik Kothari~~\textperiodcentered~~Curriculum Vitae~~\textperiodcentered~~\thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1.2cm}
+\setlength{\footskip}{14pt}
+
+% Hyperlink setup
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% -------------------------------------------------------
+%  GLOBAL SPACING CONTROL
+%  Adjust this one value to add/remove space between all sections
+% -------------------------------------------------------
+\newcommand{\sectionspacing}{\vspace{-2mm}}
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        #1\hspace{0.3mm}#2 & \textit{\small{#3}}
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Icon sizing
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+
+% Font — Palatino (elegant serif)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont}
+
+% -------------------------------------------------------
+%  DOCUMENT
+% -------------------------------------------------------
+\begin{document}
+\headerfontiii
+\thispagestyle{empty}
+
+% =======================================================
+% ===HEADER===
+% =======================================================
+\begin{center}
+    {\Huge\textbf{Pratik Kothari}}
+\end{center}
+\vspace{-4mm}
+
+\begin{center}
+    \small{
+    \faIcon[regular]{envelope}~\href{mailto:pkothari@oakland.edu}{pkothari@oakland.edu} \quad
+    \faIcon{globe}~\href{https://pratik-kothari.com}{pratik-kothari.com} \quad
+    \faIcon{graduation-cap}~\href{https://scholar.google.com/citations?user=ttBn_mQAAAAJ&hl}{Google Scholar} \quad
+    \faIcon{file-alt}~\href{https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2277546}{SSRN}
+    }
+\end{center}
+\vspace{-4mm}
+
+% =======================================================
+% ===APPOINTMENTS===
+% =======================================================
+\section{\textbf{Academic Appointments}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {Oakland University}{Rochester, MI}
+    {Assistant Professor of Finance, School of Business Administration}{2022--Present}
+\resumeSubheading
+    {University of North Texas}{Denton, TX}
+    {Visiting Assistant Professor of Finance, G.\ Brint Ryan College of Business}{2021--2022}
+\resumeSubHeadingListEnd
+\sectionspacing
+% =======================================================
+% ===EDUCATION===
+% =======================================================
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {University of Missouri}{Columbia, MO}
+    {Ph.D., Finance, Trulaske College of Business}{2019}
+\resumeSubheading
+    {University of Texas at Austin}{Austin, TX}
+    {M.S., Finance, McCombs School of Business}{2013}
+\resumeSubheading
+    {Indian Institute of Technology Roorkee}{Roorkee, India}
+    {B.Tech., Biotechnology}{2011}
+\resumeSubHeadingListEnd
+\sectionspacing
+% =======================================================
+% ===INDUSTRY===
+% =======================================================
+\section{\textbf{Industry Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {Cornerstone Research}{New York, NY}
+    {Associate}{2019--2021}
+\resumeSubheading
+    {KPMG}{Houston, TX}
+    {Valuation Associate}{2013--2014}
+\resumeSubHeadingListEnd
+\sectionspacing
+% =======================================================
+% ===PUBLICATIONS===
+% =======================================================
+\section{\textbf{Publications}}
+\vspace{0.2mm}
+\small{
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, itemsep=2pt]
+
+\item ``Board Quality and the Public Purse: A Study of Government Subsidies and Corporate Governance'' (with Stephen P.\ Ferris, Reza Houston, and Narayanan Jayaraman), \textit{Journal of Financial Research}, forthcoming.
+
+\item ``What Performance Measures Do Real Estate Investors Chase?'' (with Ryan G.\ Chacon, William G.\ Hardin III, and Thibaut G.\ Morillon), \textit{The Journal of Real Estate Finance and Economics}, forthcoming.
+
+\item ``More Risk, More Reward: The Role of Tenant Concentration in Shaping Equity-Based Compensation'' (with Ryan G.\ Chacon, Zifeng Feng, and Joseph Ooi), \textit{The Journal of Real Estate Finance and Economics}, forthcoming.
+
+\item ``From Boardroom to Balance Sheet: How Director Quality Affects Accounting Practices and Disclosures'' (with Stephen P.\ Ferris and Narayanan Jayaraman), \textit{Journal of Corporate Accounting \& Finance}, forthcoming.
+
+\item ``Strategic Generosity: The Business of Political Connections'' (with Stephen P.\ Ferris), \textit{Review of Corporate Finance}, forthcoming.
+
+\item ``Job Postings and Aggregate Stock Returns'' (with Michael S.\ O'Doherty), \textit{Journal of Financial Markets}, 2023.
+
+\item ``Economies of Scale in the Real Estate Mutual Fund Industry'' (with Ryan G.\ Chacon and Thibaut G.\ Morillon), \textit{The Journal of Real Estate Finance and Economics}, 2022.
+
+\item ``The Effect of Investor Attention on Fraud Discovery and Value Loss in Securities Class Action Litigation'' (with Anna Abdulmanova, Stephen P.\ Ferris, and Narayanan Jayaraman), \textit{Journal of Financial Research} 44(3): 513--552, 2021.
+
+\item ``Bragging Rights: Does Corporate Boasting Imply Value Creation?'' (with Don M.\ Chance and Stephen P.\ Ferris), \textit{Journal of Corporate Finance} 67: 101863, 2021.
+
+\end{enumerate}
+}
+\sectionspacing
+% =======================================================
+% ===WORKINGPAPERS===
+% =======================================================
+\section{\textbf{Working Papers \& Research in Progress}}
+\vspace{1mm}
+
+\small{
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, itemsep=2pt]
+
+\item ``Dissecting REIT Return Comovement'' (with Ryan Chacon, Cayman Seagraves, and Stace Sirmans)
+
+\item ``Do the enhanced disclosures under ASU 2023-09 improve ETR forecasts?'' (with Casey Schwab, Bridget Stomberg, and Brian Williams)
+
+\item ``Does Greater Disaggregation and Comparability of Income Tax Disclosures Reduce Analysts' Forecast Errors'' (with Shannon Chen, Casey Schwab, Bridget Stomberg, and Junwei Xia)
+
+\item ``When Dividends Deceive: Mispricing in Public Real Estate Markets'' (with Ryan G.\ Chacon, Thibaut G.\ Morillon, and Sugata Ray), Revise and Resubmit at \textit{The Journal of Real Estate Finance and Economics}.
+
+\item ``CREATE: News-Based Signals for Predicting REIT Returns'' (with Ryan G.\ Chacon, Thibaut G.\ Morillon, and Cayman Seagraves), Revise and Resubmit at \textit{The Journal of Real Estate Finance and Economics}.
+
+\item ``Checkbook Charity: What Really Drives Corporate Giving Decisions'' (with Stephen P.\ Ferris and Reza Houston)
+
+\end{enumerate}
+}
+\sectionspacing
+% =======================================================
+% ===PRESENTATIONS===
+% =======================================================
+\section{\textbf{Conference Presentations}}
+\vspace{1mm}
+\small{
+\begin{tabular*}{0.97\textwidth}[t]{@{}p{0.8cm}@{\hspace{4mm}}p{\dimexpr0.97\textwidth-1.2cm}@{}}
+2026 & American Real Estate Society Annual Meeting \\[2pt]
+2025 & American Real Estate Society Annual Meeting; MIT Symposium on Technology, AI, and Real Estate; AI in Finance 2025 (Concordia University) \\[2pt]
+2024 & American Real Estate Society Annual Meeting; American Real Estate Society Fall Symposium (University of Denver); Financial Management Association Annual Meeting; Southern Finance Association Annual Meeting \\[2pt]
+2023 & American Real Estate Society Annual Meeting; Financial Management Association Annual Meeting (Diversity Emerging Scholar Initiative); Florida Gulf Coast University (Invited) \\[2pt]
+2021 & California State University Long Beach (Invited); University of Minnesota Duluth (Invited); University of Richmond (Invited); University of South Dakota (Invited); Oakland University (Invited) \\[2pt]
+2018 & American Law and Economics Association Annual Meeting; Eastern Finance Association Annual Meeting; Financial Management Association Annual Meeting; Financial Management Association Doctoral Consortium; Cornerstone Research (Invited); McMaster University (Invited); University of Missouri (Invited); University of Wisconsin Eau Claire (Invited) \\[2pt]
+2016 & Southwest Finance Association Annual Meeting \\[2pt]
+2015 & University of Missouri (Invited) \\
+\end{tabular*}
+}
+\sectionspacing
+% =======================================================
+% ===TEACHING===
+% =======================================================
+\section{\textbf{Teaching}}
+\vspace{1mm}
+\small{
+\begin{tabularx}{0.97\textwidth}{@{}l@{\hspace{4pt}}L r@{}}
+\vspace{0.1mm}
+\textbf{Course} & \textbf{Level / Sections} & \textbf{Eval.} \\
+%\midrule
+FIN 4360: Student Managed Investment Fund & UG, 9 sections & 4.81\,/\,5.00 \\[2pt]
+FIN 4600: Investment Analysis \& Portfolio Mgmt & UG, 5 sections & 4.80\,/\,5.00 \\[2pt]
+FIN 5760: Financial Data Analytics & Grad, 1 section & 5.00\,/\,5.00 \\[2pt]
+FIN 5330: Financial Management & Grad, 5 sections & 4.69\,/\,5.00 \\[2pt]
+FIN 5450: Real Estate Investment Analysis & Grad, 1 section & 4.71\,/\,5.00 \\
+\end{tabularx}
+}
+\vspace{1mm}
+\small{\textit{Designed FIN 5760 curriculum integrating Python programming and generative AI tools (Google Gemini) for financial data analysis.}}
+\sectionspacing
+% =======================================================
+% ===GRANTS===
+% =======================================================
+\section{\textbf{Grants \& Awards}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Outstanding Research Award}{, School of Business Administration, Oakland University}{2026}
+\resumePOR{Order of the Golden Plume for Exceptional Dedication to Teaching}{, Oakland University}{2025}
+\resumePOR{University Research Council Faculty Research Fellowship}{, Oakland University}{2023,2026}
+\resumePOR{Spring/Summer Research Support}{, School of Business Administration, Oakland University}{2024,2025}
+\resumePOR{Winemiller Excellence Award for Quantitative and Analytics Research}{, University of Missouri}{2018}
+\resumePOR{Outstanding Graduate Research Award}{, University of Missouri}{2018}
+\resumePOR{Outstanding Graduate Research Award}{, University of Missouri}{2016}
+\resumePOR{Raymond and Susan Chen International Ph.D.\ Scholarship}{, University of Missouri}{2015}
+\resumeSubHeadingListEnd
+\sectionspacing
+% =======================================================
+% ===SERVICE===
+% =======================================================
+\section{\textbf{Service}}
+\vspace{1mm}
+
+\small{\textbf{Professional}}
+\vspace{-1mm}
+\begin{itemize}[leftmargin=*, labelsep=1mm, itemsep=0.5mm]
+    \small
+    \item Referee, \textit{Journal of Real Estate Portfolio Management}, \textit{Journal of Corporate Accounting \& Finance}, \textit{Corporate Governance: An International Review}
+    \item External Committee Member for Ph.D.\ in Business Administration for S.K.\ Niamathulla, Annamalai University, 2023
+    \item Session Chair, Financial Management Association Annual Meeting, 2024
+    \item Discussant, Financial Management Association Annual Meeting, 2024
+    \item Discussant, Southern Finance Association Annual Meeting, 2024
+\end{itemize}
+
+\vspace{1mm}
+\small{\textbf{Internal}}
+\vspace{-1mm}
+\begin{itemize}[leftmargin=*, labelsep=1mm, itemsep=0.5mm]
+    \small
+    \item Member, Oakland University Senate -- Faculty Advocacy and Engagement Committee, 2025--Present
+    \item Chair, Undergraduate Curriculum Committee, 2025--Present
+    \item Doctoral Advisory Committee, Pranav Sinha, Department of Computer Science, Oakland University, 2025
+    \item Honors Thesis Project Advisor, Meron Eeso, 2024--2025
+    \item Financial Literacy advocate for Pontiac High School in collaboration with OU Pre-College Programs
+    \item FIN Curriculum Management Committee, 2022--Present
+    \item ACC \& FIN Research Committee, 2022--Present
+    \item FIN Learning Assurance Committee, 2022--Present
+    \item Strategic Planning Committee -- Finance, 2022--Present
+    \item Recruitment Committee for Visiting Assistant Professor of Finance, 2024--2025
+    \item Recruitment Committee for Assistant Professor of Finance, 2025--Present
+%    \item Independent Study (FIN 4996 and FIN 6970) Advising, 9 students
+\end{itemize}
+\sectionspacing
+% =======================================================
+% ===MEDIA===
+% =======================================================
+\section{\textbf{Media Coverage}}
+\vspace{-0.4mm}
+\begin{itemize}[leftmargin=*, labelsep=1mm, itemsep=0.5mm]
+    \small
+    \item ``Here's how to financially prepare amid recession fears, according to experts,'' WXYZ Channel 7 Detroit
+    \item ``Leap Year impact on business,'' Fox 2 Detroit
+    \item ``Student-managed investment fund at Oakland University has real stakes -- with big money,'' Fox 2 Detroit
+\end{itemize}
+\sectionspacing
+% =======================================================
+% ===AFFILIATIONS===
+% =======================================================
+\section{\textbf{Professional Affiliations}}
+\vspace{-0.4mm}
+\begin{itemize}[leftmargin=*, labelsep=1mm, itemsep=0.5mm]
+    \small
+    \item American Real Estate and Urban Economics Association
+    \item American Real Estate Society
+    \item Financial Management Association
+\end{itemize}
+\sectionspacing
+% =======================================================
+\end{document}

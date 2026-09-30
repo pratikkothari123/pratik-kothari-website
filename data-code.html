@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5FJ16B7HM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Z5FJ16B7HM');
-  </script>
+  <script src="js/analytics.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data &amp; Code | Pratik Kothari</title>
@@ -23,90 +16,123 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=data-citation-3">
 </head>
 <body>
-
-  <nav class="nav">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-name">Pratik Kothari</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navigation-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navigation-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="data-code.html" class="active">Data &amp; Code</a></li>
+        <li><a href="data-code.html" class="active" aria-current="page">Data &amp; Code</a></li>
+        <li><a href="files/kothari_cv.pdf" target="_blank" rel="noopener">CV</a></li>
       </ul>
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <div class="container">
-
-      <div class="page-header">
+      <header class="page-header">
+        <p class="eyebrow">Resources for research</p>
         <h1>Data &amp; Code</h1>
-        <p>Datasets and replication code associated with my research. If you have questions about any of the materials below, please feel free to <a href="mailto:pkothari@oakland.edu">contact me</a>.</p>
-      </div>
+        <p>Data and research materials to build on. Share a few details before downloading so I can learn who is using the data and, if you choose, keep you informed of updates.</p>
+      </header>
 
-      <section class="papers-section">
-
-        <!-- ═══════════════════════════════════════════════════════
-             TO ADD A NEW PAPER'S DATA/CODE:
-             1. Copy a data-card block below
-             2. Paste it where you want it to appear
-             3. Update the title, journal reference, and links
-             4. Place downloadable files in the files/ folder
-             ═══════════════════════════════════════════════════════ -->
-
-        <!-- Example card — replace with real data when available -->
-        <!--
-        <div class="data-card">
-          <h3 class="data-card-title">Job Postings and Aggregate Stock Returns</h3>
-          <p class="data-card-ref"><em>Journal of Financial Markets</em>, 2023 (with Michael S. O'Doherty)</p>
-          <div class="data-items">
-            <a href="files/example-data.zip" class="data-link">
-              <i class="fa-solid fa-download"></i> Dataset (CSV)
-            </a>
-            <a href="#" class="data-link">
-              <i class="fa-brands fa-github"></i> Replication Code
-            </a>
-            <a href="files/example-readme.pdf" class="data-link">
-              <i class="fa-solid fa-file-pdf"></i> README
-            </a>
-          </div>
-        </div>
-        -->
-
-        <div class="data-card">
-          <h3 class="data-card-title">Tax Effectiveness Scores</h3>
-          <p class="data-card-ref">Schwab, C. M., Stomberg, B., &amp; Williams, B. M. (2022). Effective tax planning. <em>The Accounting Review</em>, 97(1), 413&ndash;437.</p>
-          <div class="data-items">
-            <a href="files/tax_effectiveness_1yr.xlsx" class="data-link">
-              <i class="fa-solid fa-download"></i> 1 Year Scores (xlsx)
-            </a>
-            <a href="files/tax_effectiveness_5yr.xlsx" class="data-link">
-              <i class="fa-solid fa-download"></i> 5 Year Scores (xlsx)
-            </a>
-            <a href="https://publications.aaahq.org/accounting-review/article-abstract/97/1/413/4364/Effective-Tax-Planning" class="data-link" target="_blank" rel="noopener">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> SSW 2022
-            </a>
+      <div class="data-layout">
+        <article class="data-card" aria-labelledby="dataset-title">
+          <div class="dataset-icon" aria-hidden="true"><i class="fa-solid fa-table-cells"></i></div>
+          <h2 class="data-card-title" id="dataset-title">Tax Effectiveness Scores</h2>
+          <p class="data-description">Tax effectiveness scores constructed using the methodology of Schwab, Stomberg, and Williams (2022), with recent Compustat data covering 1994&ndash;2024.</p>
+          <p class="data-citation-note">When using these data in your research, you must cite <a href="#data-paper-citation">Schwab, Stomberg, and Williams (2022)</a> and <a href="https://pratik-kothari.com/data-code.html" target="_blank" rel="noopener">this website</a>.</p>
+          <div class="dataset-meta">
+            <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 1994&ndash;2024</span>
+            <span><i class="fa-solid fa-arrow-rotate-right" aria-hidden="true"></i> Updated June 2026</span>
           </div>
           <div class="data-note">
-            <p>This dataset is constructed using the methodology of Schwab, Stomberg, and Williams (2022) over the period 1994&ndash;2024 using recent Compustat data. Tax haven data for fiscal years 2020 and beyond are obtained from the <a href="https://www.opensanctions.org/datasets/us_corpwatch/" target="_blank" rel="noopener">OpenSanctions US CorpWatch</a> dataset.</p>
-            <p><em>Last updated: June 2026.</em></p>
+            <h3>About the data</h3>
+            <p>Tax haven data for fiscal years 2020 and beyond are obtained from the <a href="https://www.opensanctions.org/datasets/us_corpwatch/" target="_blank" rel="noopener">OpenSanctions US CorpWatch</a> dataset.</p>
           </div>
+          <div class="data-card-ref" id="data-paper-citation">
+            <p>Schwab, C. M., Stomberg, B., &amp; Williams, B. M. (2022). Effective tax planning. <em>The Accounting Review</em>, 97(1), 413&ndash;437.</p>
+            <a href="https://publications.aaahq.org/accounting-review/article-abstract/97/1/413/4364/Effective-Tax-Planning" class="paper-link" target="_blank" rel="noopener">Read the original paper <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <div>
+          <section class="access-card" aria-labelledby="access-title">
+            <div id="registration-panel">
+              <p class="eyebrow">A quick introduction</p>
+              <h2 id="access-title">Get the data</h2>
+              <p class="form-intro">Please enter your email to access the files. Your name and institution are optional.</p>
+              <p class="preview-notice" id="preview-notice" hidden>Local preview &mdash; no information is sent or saved. You can try the form to review the download experience.</p>
+              <form id="download-form" method="post">
+                <div class="form-field">
+                  <label for="download-email">Email <span aria-hidden="true">*</span></label>
+                  <input id="download-email" name="email" type="email" autocomplete="email" placeholder="you@university.edu" maxlength="254" required aria-describedby="form-privacy">
+                </div>
+                <div class="form-field">
+                  <label for="download-name">Name <span class="optional">(optional)</span></label>
+                  <input id="download-name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="120">
+                </div>
+                <div class="form-field">
+                  <label for="download-affiliation">Institution / organization <span class="optional">(optional)</span></label>
+                  <input id="download-affiliation" name="affiliation" type="text" autocomplete="organization" placeholder="University or organization" maxlength="200">
+                </div>
+                <fieldset class="form-field dataset-field">
+                  <legend id="dataset-field-label">Dataset</legend>
+                  <details class="dataset-picker" id="dataset-picker">
+                    <summary id="download-dataset" aria-labelledby="dataset-field-label dataset-current-label">
+                      <span id="dataset-current-label">Choose a dataset</span>
+                      <svg class="dataset-caret" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+                    </summary>
+                    <div class="dataset-options" role="radiogroup" aria-labelledby="dataset-field-label">
+                      <label class="dataset-option">
+                        <input type="radio" name="dataset" value="tax-effectiveness" required>
+                        <span>Tax Effectiveness Scores</span>
+                      </label>
+                    </div>
+                  </details>
+                </fieldset>
+                <div class="honeypot" aria-hidden="true">
+                  <label for="download-website">Leave this field empty</label>
+                  <input id="download-website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="updates" value="yes">
+                  <span>Email me when these data are updated or corrected.</span>
+                </label>
+                <button class="button button-primary form-submit" type="submit" disabled>Get download links <span aria-hidden="true">&rarr;</span></button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                <p class="form-privacy" id="form-privacy">Your details are used to keep a record of dataset users. Update emails are optional. To request removal of your details, <a href="mailto:pkothari@oakland.edu">contact me</a>.</p>
+              </form>
+              <noscript><p class="form-status">Please enable JavaScript to use this form, or <a href="mailto:pkothari@oakland.edu?subject=Tax%20effectiveness%20data">email me for the data</a>.</p></noscript>
+            </div>
+
+            <div class="download-success" id="download-success" hidden>
+              <div class="success-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></div>
+              <p class="eyebrow">Ready for your research</p>
+              <h2 id="success-title" tabindex="-1">Your data are ready.</h2>
+              <p id="success-message">Thank you for introducing yourself. Download your selected files below.</p>
+              <div class="download-links" id="download-links"></div>
+              <button type="button" class="text-button" id="download-reset">Choose different files</button>
+            </div>
+          </section>
+          <p class="data-help">Questions about the data? <a href="mailto:pkothari@oakland.edu">Get in touch <span aria-hidden="true">&nearr;</span></a></p>
         </div>
-
-      </section>
-
+      </div>
     </div>
   </main>
 
   <script src="js/main.js"></script>
+  <script src="js/download-config.js"></script>
+  <script src="js/datasets.js?v=dataset-picker-2"></script>
+  <script src="js/downloads.js?v=dataset-picker-2"></script>
 </body>
 </html>
