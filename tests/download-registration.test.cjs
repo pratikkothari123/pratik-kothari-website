@@ -28,7 +28,7 @@ function service(options = {}) {
   return { rows, post: data => context.doPost({ parameter: data }), get: () => context.doGet(), held: () => held };
 }
 
-test('records requested data and explicit opt-in without echoing personal details', () => {
+test('records required identity and selected data without echoing personal details', () => {
   const app = service();
   assert.deepEqual(app.post(valid), { ok: true, requestId: valid.request_id });
   assert.equal(app.rows.length, 1);
@@ -39,11 +39,11 @@ test('records requested data and explicit opt-in without echoing personal detail
   assert.deepEqual(app.get(), { ok: true, service: 'Download registration' });
 });
 
-test('preserves checked update consent for the named dataset', () => {
+test('ignores a legacy update flag and does not subscribe users', () => {
   const app = service();
   assert.equal(app.post({ ...valid, updates: 'yes' }).ok, true);
   assert.equal(app.rows[0][4], 'Tax Effectiveness Scores');
-  assert.equal(app.rows[0][5], 'Yes');
+  assert.equal(app.rows[0][5], 'No');
 });
 
 test('retries with the same request ID do not append duplicate entries', () => {
@@ -57,9 +57,10 @@ test('invalid fields and bot submissions never create a row', () => {
   for (const change of [
     { email: '' }, { email: 'invalid' }, { email: 'test@invalid' },
     { email: 'a'.repeat(255) + '@example.com' },
+    { name: '' }, { name: '   ' }, { affiliation: '' }, { affiliation: '   ' },
     { name: 'a'.repeat(121) }, { affiliation: 'a'.repeat(201) },
     { dataset: '../private' }, { dataset: '__proto__' }, { dataset: 'both' },
-    { updates: 'on' }, { request_id: '' }, { website: 'spam.example' }
+    { request_id: '' }, { website: 'spam.example' }
   ]) {
     const app = service();
     assert.equal(app.post({ ...valid, ...change }).ok, false);

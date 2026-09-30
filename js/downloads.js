@@ -54,7 +54,10 @@
     if (!datasetPicker.contains(event.target)) datasetPicker.open = false;
   });
   form.addEventListener('invalid', function (event) {
-    if (event.target.name === 'dataset') datasetPicker.open = true;
+    var identityValid = ['email', 'name', 'affiliation'].every(function (field) {
+      return form.elements.namedItem(field).validity.valid;
+    });
+    if (event.target.name === 'dataset' && identityValid) datasetPicker.open = true;
   }, true);
   form.addEventListener('reset', function () {
     datasetLabel.textContent = 'Choose a dataset';
@@ -92,10 +95,12 @@
     event.preventDefault();
     if (busy) return;
     if (!preview && !validEndpoint) {
-      showStatus('Registration is not available yet. Please email me for access.');
+      showStatus('The download form could not load. Please refresh and try again.');
       return;
     }
-    email.value = email.value.trim();
+    ['email', 'name', 'affiliation'].forEach(function (field) {
+      form.elements.namedItem(field).value = form.elements.namedItem(field).value.trim();
+    });
     email.setCustomValidity(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value) ? '' : 'Please enter a valid email address.');
     if (!form.reportValidity()) return;
 
@@ -122,7 +127,8 @@
     body.set('name', String(values.get('name') || '').trim());
     body.set('affiliation', String(values.get('affiliation') || '').trim());
     body.set('dataset', datasetId);
-    body.set('updates', values.get('updates') === 'yes' ? 'yes' : 'no');
+    // The existing Google endpoint expects this field. No updates are offered.
+    body.set('updates', 'no');
     body.set('website', '');
 
     var controller = new AbortController();
@@ -177,6 +183,6 @@
   } else if (validEndpoint) {
     submit.disabled = false;
   } else {
-    showStatus('Registration is not available yet. Please email me for access.');
+    showStatus('The download form could not load. Please refresh and try again.');
   }
 }());

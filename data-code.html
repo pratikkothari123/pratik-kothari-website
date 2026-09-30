@@ -42,7 +42,6 @@
       <header class="page-header">
         <p class="eyebrow">Resources for research</p>
         <h1>Data &amp; Code</h1>
-        <p>Data and research materials to build on. Share a few details before downloading so I can learn who is using the data and, if you choose, keep you informed of updates.</p>
       </header>
 
       <div class="data-layout">
@@ -68,22 +67,20 @@
         <div>
           <section class="access-card" aria-labelledby="access-title">
             <div id="registration-panel">
-              <p class="eyebrow">A quick introduction</p>
               <h2 id="access-title">Get the data</h2>
-              <p class="form-intro">Please enter your email to access the files. Your name and institution are optional.</p>
               <p class="preview-notice" id="preview-notice" hidden>Local preview &mdash; no information is sent or saved. You can try the form to review the download experience.</p>
               <form id="download-form" method="post">
                 <div class="form-field">
                   <label for="download-email">Email <span aria-hidden="true">*</span></label>
-                  <input id="download-email" name="email" type="email" autocomplete="email" placeholder="you@university.edu" maxlength="254" required aria-describedby="form-privacy">
+                  <input id="download-email" name="email" type="email" autocomplete="email" placeholder="you@university.edu" maxlength="254" required>
                 </div>
                 <div class="form-field">
-                  <label for="download-name">Name <span class="optional">(optional)</span></label>
-                  <input id="download-name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="120">
+                  <label for="download-name">Name <span aria-hidden="true">*</span></label>
+                  <input id="download-name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="120" pattern=".*\S.*" required>
                 </div>
                 <div class="form-field">
-                  <label for="download-affiliation">Institution / organization <span class="optional">(optional)</span></label>
-                  <input id="download-affiliation" name="affiliation" type="text" autocomplete="organization" placeholder="University or organization" maxlength="200">
+                  <label for="download-affiliation">Institution / organization <span aria-hidden="true">*</span></label>
+                  <input id="download-affiliation" name="affiliation" type="text" autocomplete="organization" placeholder="University or organization" maxlength="200" pattern=".*\S.*" required>
                 </div>
                 <fieldset class="form-field dataset-field">
                   <legend id="dataset-field-label">Dataset</legend>
@@ -104,13 +101,8 @@
                   <label for="download-website">Leave this field empty</label>
                   <input id="download-website" name="website" tabindex="-1" autocomplete="off">
                 </div>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="updates" value="yes">
-                  <span>Email me when these data are updated or corrected.</span>
-                </label>
                 <button class="button button-primary form-submit" type="submit" disabled>Get download links <span aria-hidden="true">&rarr;</span></button>
                 <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-                <p class="form-privacy" id="form-privacy">Your details are used to keep a record of dataset users. Update emails are optional. To request removal of your details, <a href="mailto:pkothari@oakland.edu">contact me</a>.</p>
               </form>
               <noscript><p class="form-status">Please enable JavaScript to use this form, or <a href="mailto:pkothari@oakland.edu?subject=Tax%20effectiveness%20data">email me for the data</a>.</p></noscript>
             </div>
@@ -131,8 +123,8 @@
   </main>
 
   <script src="js/main.js"></script>
-  <script src="js/download-config.js"></script>
+  <script src="js/download-config.js?v=registration-live-1"></script>
   <script src="js/datasets.js?v=dataset-picker-2"></script>
-  <script src="js/downloads.js?v=dataset-picker-2"></script>
+  <script src="js/downloads.js?v=registration-live-1"></script>
 </body>
 </html>

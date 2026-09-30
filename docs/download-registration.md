@@ -7,14 +7,15 @@ connected to a private Google Sheet.
 ## Review now
 
 Run `python -m http.server 4173 --bind 127.0.0.1` from the website folder, then open
-http://127.0.0.1:4173/data-code.html. With the endpoint empty, localhost and file
-previews show a notice and let you try the form without sending or saving any
-details. The download links point to the existing, unmodified XLSX files.
+http://127.0.0.1:4173/data-code.html. The configured endpoint saves real
+registrations from the local website as well as the public site. For a non-saving
+layout preview, temporarily empty `endpoint` in `js/download-config.js`; localhost
+and file previews then show a notice. Restore the endpoint before publishing.
+The download links point to the existing, unmodified XLSX files.
 
-The form asks for email (required), name and institution (optional), the desired
-dataset, and an optional, unchecked update-email checkbox. Each saved form
-submission is treated as a download record. No email is sent by this
-implementation; the opt-in is saved so you can contact those users separately.
+The form requires email, name, institution, and the desired dataset. Each saved
+form submission is treated as a download record. There is no update-email
+checkbox and this implementation does not send emails.
 
 ## Connect a private Google Sheet
 
@@ -30,13 +31,24 @@ implementation; the opt-in is saved so you can contact those users separately.
    is not a secret; the spreadsheet ID stays in server-side script properties.
 5. Test in the local preview and an incognito browser. Confirm a row appears in
    the private sheet before download links appear. Check the selected dataset's
-   files, the unchecked opt-in, and a retry after a connection failure.
+   files, all three required identity fields, and a retry after a connection
+   failure.
    Publish the configured endpoint only after these checks pass.
+
+## Update an existing Google deployment
+
+Website edits do not automatically change the code saved in Google's script
+editor. To apply the current server-side validation, replace that editor's
+`Code.gs` with `integrations/google-sheets/Code.gs` and save. Select **Deploy >
+Manage deployments**, click the pencil, choose **New version** under Version,
+and click **Deploy**. The existing `/exec` URL and spreadsheet configuration stay
+the same; there is no need to rerun setup.
 
 ## What is saved
 
-Timestamp, email, optional name, optional institution, requested dataset, the
-update-email choice, and a random request ID. The ID prevents duplicate rows when
+Timestamp, email, name, institution, requested dataset, and a random request ID.
+The existing sheet's legacy **Email updates** column remains for compatibility
+and receives **No**. The ID prevents duplicate rows when
 a submission is retried after an interrupted response. The endpoint validates
 fields and treats spreadsheet formulas as text. GET requests expose no entries.
 

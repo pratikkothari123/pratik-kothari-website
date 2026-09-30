@@ -29,14 +29,12 @@ function doPost(event) {
   var name = String(data.name || '').trim();
   var affiliation = String(data.affiliation || '').trim();
   var dataset = String(data.dataset || '');
-  var updates = String(data.updates || '');
   var requestId = String(data.request_id || '');
   var allowedDatasets = { 'tax-effectiveness': 'Tax Effectiveness Scores' };
 
   if (data.website || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254 ||
-      name.length > 120 || affiliation.length > 200 ||
+      !name || name.length > 120 || !affiliation || affiliation.length > 200 ||
       !Object.prototype.hasOwnProperty.call(allowedDatasets, dataset) ||
-      ['yes', 'no'].indexOf(updates) === -1 ||
       !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(requestId)) {
     return registrationResponse_({ ok: false, error: 'invalid_submission' });
   }
@@ -48,7 +46,8 @@ function doPost(event) {
     if (!lock.tryLock(10000)) return registrationResponse_({ ok: false, error: 'busy' });
     var sheet = SpreadsheetApp.openById(spreadsheetId).getSheetByName(REGISTRATION_SHEET);
     if (!sheet) throw new Error('Registration sheet missing');
-    var row = [new Date(), safeCell_(email), safeCell_(name), safeCell_(affiliation), allowedDatasets[dataset], updates === 'yes' ? 'Yes' : 'No', requestId];
+    // Keep the existing seven-column log compatible. Update emails are disabled.
+    var row = [new Date(), safeCell_(email), safeCell_(name), safeCell_(affiliation), allowedDatasets[dataset], 'No', requestId];
 
     // Idempotent retries: a connection failure after the append must not create
     // an extra row. Check the persisted ID while holding the script lock.
