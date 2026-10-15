@@ -30,8 +30,6 @@ values. Neutral zeros enter the mean; failed scoring calls do not.
 
 COLUMNS
 score_month: News publication month, in YYYYMM format.
-portfolio_month: Following calendar month, in YYYYMM format. When matching
-  these scores to next-month returns, use this column without another lag.
 OFFICE: Office.
 INDUSTRIAL: Industrial.
 RETAIL: Retail.
@@ -49,9 +47,9 @@ return availability used by the project. Earlier cells in these two
 columns are blank (unavailable), not zero. Do not replace blanks with zero.
 
 TIMING
-The file is indexed by publication month, not portfolio month. Its
-portfolio_month values run from February 1994 through January 2024.
-For example, score_month=199401 maps to portfolio_month=199402.
+The file is indexed by news publication month. When matching scores to
+next-month returns, use the following calendar month. For example,
+score_month=199401 corresponds to February 1994 returns.
 The December 1993 signal used to form the paper's January 1994 portfolio
 is outside this file. December 2023 scores map to January 2024, beyond
 the paper's 1994-2023 return sample. This CSV alone therefore does not

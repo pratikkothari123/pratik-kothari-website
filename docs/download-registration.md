@@ -11,7 +11,7 @@ http://127.0.0.1:4173/data-code.html. The configured endpoint saves real
 registrations from the local website as well as the public site. For a non-saving
 layout preview, temporarily empty `endpoint` in `js/download-config.js`; localhost
 and file previews then show a notice. Restore the endpoint before publishing.
-The download links point to the original XLSX files and the unmodified CREATE
+The download links point to the original XLSX files and the CREATE
 sector-score CSV.
 
 The form requires email, name, institution, and the desired dataset. Each saved
