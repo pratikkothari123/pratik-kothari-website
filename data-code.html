@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="css/style.css?v=data-citation-3">
+  <link rel="stylesheet" href="css/style.css?v=create-scores-1">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -45,6 +45,24 @@
       </header>
 
       <div class="data-layout">
+        <div class="dataset-cards">
+        <article class="data-card" id="create-sector-scores" aria-labelledby="create-title">
+          <div class="dataset-icon" aria-hidden="true"><i class="fa-solid fa-table-cells"></i></div>
+          <h2 class="data-card-title" id="create-title">CREATE Sector Scores</h2>
+          <p class="data-description">Monthly Commercial Real Estate AI Text-Evaluation (CREATE) scores for nine REIT property sectors. The scores aggregate GPT-5 assessments of Wall Street Journal news after identifying details have been removed to mitigate look-ahead bias.</p>
+          <p class="data-citation-note"><strong>Citation required.</strong> If you use these data, you must cite <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887322" target="_blank" rel="noopener">Chacon, Kothari, Morillon, and Seagraves (2025)</a>, <em>Commercial Real Estate AI Text-Evaluation (CREATE): News-Based Signals for Predicting REIT Returns</em>.</p>
+          <div class="dataset-meta">
+            <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> January 1994&ndash;December 2023</span>
+            <span><i class="fa-solid fa-table-cells" aria-hidden="true"></i> 9 sectors &middot; Monthly CSV</span>
+          </div>
+          <div class="data-note">
+            <h3>About the data</h3>
+            <p>Office, Industrial, Retail, Residential, Healthcare, Lodging, Self Storage, Telecom, and Data Centers. Scores are monthly averages of article assessments (&minus;1, 0, +1); neutral zeros are included. Telecom begins in January 2012 and Data Centers in December 2015. Earlier values for those sectors are blank, not zero.</p>
+            <p><code>score_month</code> is the news publication month; <code>portfolio_month</code> is the following month. Both use YYYYMM. Use the appropriate month when matching scores to other data.</p>
+            <p><a href="files/CREATE_README.txt" download>Data guide &amp; required citation (TXT)</a> &middot; <a href="files/CREATE_citation.bib" download>BibTeX citation</a></p>
+          </div>
+        </article>
+
         <article class="data-card" aria-labelledby="dataset-title">
           <div class="dataset-icon" aria-hidden="true"><i class="fa-solid fa-table-cells"></i></div>
           <h2 class="data-card-title" id="dataset-title">Tax Effectiveness Scores</h2>
@@ -59,6 +77,7 @@
             <p>Tax haven data for fiscal years 2020 and beyond are obtained from the <a href="https://www.opensanctions.org/datasets/us_corpwatch/" target="_blank" rel="noopener">OpenSanctions US CorpWatch</a> dataset.</p>
           </div>
         </article>
+        </div>
 
         <div>
           <section class="access-card" aria-labelledby="access-title">
@@ -87,12 +106,22 @@
                     </summary>
                     <div class="dataset-options" role="radiogroup" aria-labelledby="dataset-field-label">
                       <label class="dataset-option">
+                        <input type="radio" name="dataset" value="create-sector-scores" required>
+                        <span>CREATE Sector Scores</span>
+                      </label>
+                      <label class="dataset-option">
                         <input type="radio" name="dataset" value="tax-effectiveness" required>
                         <span>Tax Effectiveness Scores</span>
                       </label>
                     </div>
                   </details>
                 </fieldset>
+                <div id="citation-agreement" hidden>
+                  <label class="checkbox-label" for="download-citation">
+                    <input id="download-citation" name="citation" type="checkbox" value="agreed" disabled>
+                    <span>I agree to cite <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887322" target="_blank" rel="noopener">Chacon, Kothari, Morillon, and Seagraves (2025)</a> if I use the CREATE scores.</span>
+                  </label>
+                </div>
                 <div class="honeypot" aria-hidden="true">
                   <label for="download-website">Leave this field empty</label>
                   <input id="download-website" name="website" tabindex="-1" autocomplete="off">
@@ -100,7 +129,7 @@
                 <button class="button button-primary form-submit" type="submit" disabled>Get download links <span aria-hidden="true">&rarr;</span></button>
                 <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
               </form>
-              <noscript><p class="form-status">Please enable JavaScript to use this form, or <a href="mailto:pkothari@oakland.edu?subject=Tax%20effectiveness%20data">email me for the data</a>.</p></noscript>
+              <noscript><p class="form-status">Please enable JavaScript to use this form, or <a href="mailto:pkothari@oakland.edu?subject=Research%20data">email me for the data</a>.</p></noscript>
             </div>
 
             <div class="download-success" id="download-success" hidden>
@@ -108,6 +137,7 @@
               <p class="eyebrow">Ready for your research</p>
               <h2 id="success-title" tabindex="-1">Your data are ready.</h2>
               <p id="success-message">Thank you for introducing yourself. Download your selected files below.</p>
+              <p class="data-citation-note" id="success-citation" hidden></p>
               <div class="download-links" id="download-links"></div>
               <button type="button" class="text-button" id="download-reset">Choose different files</button>
             </div>
@@ -120,7 +150,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/download-config.js?v=registration-live-1"></script>
-  <script src="js/datasets.js?v=dataset-picker-2"></script>
-  <script src="js/downloads.js?v=registration-live-1"></script>
+  <script src="js/datasets.js?v=create-scores-1"></script>
+  <script src="js/downloads.js?v=create-scores-1"></script>
 </body>
 </html>

@@ -11,11 +11,16 @@ http://127.0.0.1:4173/data-code.html. The configured endpoint saves real
 registrations from the local website as well as the public site. For a non-saving
 layout preview, temporarily empty `endpoint` in `js/download-config.js`; localhost
 and file previews then show a notice. Restore the endpoint before publishing.
-The download links point to the existing, unmodified XLSX files.
+The download links point to the original XLSX files and the unmodified CREATE
+sector-score CSV. CREATE also includes a data guide and a BibTeX citation.
 
 The form requires email, name, institution, and the desired dataset. Each saved
 form submission is treated as a download record. There is no update-email
 checkbox and this implementation does not send emails.
+CREATE downloads additionally require an acknowledgment that users must cite
+Chacon, Kothari, Morillon, and Seagraves (2025). This is validated in the browser
+and by the deployed endpoint. The citation also appears with the download links
+and in the accompanying data guide and BibTeX file.
 
 ## Connect a private Google Sheet
 
@@ -64,7 +69,9 @@ verify a Google account's deployment permissions or browser CORS behavior.
 
 - Dataset choices use their exact public names. `js/datasets.js` groups files
   belonging to each dataset; Tax Effectiveness Scores currently has 1-year and
-  5-year XLSX files. To add new data, add its ID, name, and files to that catalog,
+  5-year XLSX files. CREATE Sector Scores (`create-sector-scores`) has a monthly
+  CSV for January 1994-December 2023, a TXT data guide, and a BIB citation. File
+  labels reflect their actual formats. To add new data, add its ID, name, and files to that catalog,
   describe it on `data-code.html`, and add the same ID/name to `allowedDatasets`
   in the Google Sheets script. Redeploy that endpoint when changing its list.
   The picker opens inside the page rather than using a browser popup. Its first

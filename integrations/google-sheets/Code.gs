@@ -30,11 +30,15 @@ function doPost(event) {
   var affiliation = String(data.affiliation || '').trim();
   var dataset = String(data.dataset || '');
   var requestId = String(data.request_id || '');
-  var allowedDatasets = { 'tax-effectiveness': 'Tax Effectiveness Scores' };
+  var allowedDatasets = {
+    'tax-effectiveness': 'Tax Effectiveness Scores',
+    'create-sector-scores': 'CREATE Sector Scores'
+  };
 
   if (data.website || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254 ||
       !name || name.length > 120 || !affiliation || affiliation.length > 200 ||
       !Object.prototype.hasOwnProperty.call(allowedDatasets, dataset) ||
+      (dataset === 'create-sector-scores' && data.citation !== 'agreed') ||
       !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(requestId)) {
     return registrationResponse_({ ok: false, error: 'invalid_submission' });
   }

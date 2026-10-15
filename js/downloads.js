@@ -19,6 +19,17 @@
   var datasetPicker = document.getElementById('dataset-picker');
   var datasetOptions = datasetPicker.querySelector('.dataset-options');
   var datasetLabel = document.getElementById('dataset-current-label');
+  var citationAgreement = document.getElementById('citation-agreement');
+  var citationCheckbox = document.getElementById('download-citation');
+
+  function updateCitationAgreement(datasetId) {
+    var dataset = datasets.find(function (item) { return item.id === datasetId; });
+    var required = Boolean(dataset && dataset.citation);
+    citationAgreement.hidden = !required;
+    citationCheckbox.disabled = !required;
+    citationCheckbox.required = required;
+    citationCheckbox.checked = false;
+  }
   datasets.forEach(function (dataset) {
     var existing = Array.from(datasetOptions.querySelectorAll('input')).some(function (input) {
       return input.value === dataset.id;
@@ -40,6 +51,7 @@
   datasetPicker.addEventListener('change', function (event) {
     var input = event.target;
     if (input.name !== 'dataset' || !input.checked) return;
+    updateCitationAgreement(input.value);
     datasetLabel.textContent = input.closest('label').querySelector('span').textContent;
     datasetPicker.open = false;
     document.getElementById('download-dataset').focus();
@@ -62,6 +74,7 @@
   form.addEventListener('reset', function () {
     datasetLabel.textContent = 'Choose a dataset';
     datasetPicker.open = false;
+    updateCitationAgreement('');
   });
 
   function showStatus(message, state) {
@@ -77,10 +90,22 @@
       link.className = 'button button-primary';
       link.href = file.path;
       link.download = file.path.split('/').pop();
-      link.textContent = file.name + ' (XLSX)';
+      link.textContent = file.name + ' (' + file.path.split('.').pop().toUpperCase() + ')';
       links.appendChild(link);
     });
     document.getElementById('success-title').textContent = dataset.name;
+    var citation = document.getElementById('success-citation');
+    citation.replaceChildren();
+    citation.hidden = !dataset.citation;
+    if (dataset.citation) {
+      citation.appendChild(document.createTextNode('If you use these data, you must cite: '));
+      var paper = document.createElement('a');
+      paper.href = dataset.citation.url;
+      paper.target = '_blank';
+      paper.rel = 'noopener';
+      paper.textContent = dataset.citation.text;
+      citation.appendChild(paper);
+    }
     document.getElementById('success-message').textContent = preview
       ? 'Preview complete. No information was sent or saved. These links download the actual dataset files.'
       : 'Thank you for introducing yourself. Your registration has been saved. Download your selected files below.';
@@ -127,6 +152,7 @@
     body.set('name', String(values.get('name') || '').trim());
     body.set('affiliation', String(values.get('affiliation') || '').trim());
     body.set('dataset', datasetId);
+    body.set('citation', String(values.get('citation') || ''));
     // The existing Google endpoint expects this field. No updates are offered.
     body.set('updates', 'no');
     body.set('website', '');
@@ -159,6 +185,7 @@
       window.clearTimeout(timeout);
       busy = false;
       controls.forEach(function (control) { control.disabled = false; });
+      citationCheckbox.disabled = !citationCheckbox.required;
       form.removeAttribute('aria-busy');
     }
   });
