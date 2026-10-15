@@ -49,18 +49,8 @@
         <article class="data-card" id="create-sector-scores" aria-labelledby="create-title">
           <div class="dataset-icon" aria-hidden="true"><i class="fa-solid fa-table-cells"></i></div>
           <h2 class="data-card-title" id="create-title">CREATE Sector Scores</h2>
-          <p class="data-description">Monthly Commercial Real Estate AI Text-Evaluation (CREATE) scores for nine REIT property sectors. The scores aggregate GPT-5 assessments of Wall Street Journal news after identifying details have been removed to mitigate look-ahead bias.</p>
-          <p class="data-citation-note"><strong>Citation required.</strong> If you use these data, you must cite <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887322" target="_blank" rel="noopener">Chacon, Kothari, Morillon, and Seagraves (2025)</a>, <em>Commercial Real Estate AI Text-Evaluation (CREATE): News-Based Signals for Predicting REIT Returns</em>.</p>
-          <div class="dataset-meta">
-            <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> January 1994&ndash;December 2023</span>
-            <span><i class="fa-solid fa-table-cells" aria-hidden="true"></i> 9 sectors &middot; Monthly CSV</span>
-          </div>
-          <div class="data-note">
-            <h3>About the data</h3>
-            <p>Office, Industrial, Retail, Residential, Healthcare, Lodging, Self Storage, Telecom, and Data Centers. Scores are monthly averages of article assessments (&minus;1, 0, +1); neutral zeros are included. Telecom begins in January 2012 and Data Centers in December 2015. Earlier values for those sectors are blank, not zero.</p>
-            <p><code>score_month</code> is the news publication month; <code>portfolio_month</code> is the following month. Both use YYYYMM. Use the appropriate month when matching scores to other data.</p>
-            <p><a href="files/CREATE_README.txt" download>Data guide &amp; required citation (TXT)</a> &middot; <a href="files/CREATE_citation.bib" download>BibTeX citation</a></p>
-          </div>
+          <p class="data-description">Sector-level CREATE scores constructed using the methodology of Chacon, Kothari, Morillon, and Seagraves (2025), covering 1994&ndash;2023.</p>
+          <p class="data-citation-note">When using these data in your research, you must cite <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887322" target="_blank" rel="noopener">Chacon, Kothari, Morillon, and Seagraves (2025)</a>.</p>
         </article>
 
         <article class="data-card" aria-labelledby="dataset-title">
@@ -116,12 +106,6 @@
                     </div>
                   </details>
                 </fieldset>
-                <div id="citation-agreement" hidden>
-                  <label class="checkbox-label" for="download-citation">
-                    <input id="download-citation" name="citation" type="checkbox" value="agreed" disabled>
-                    <span>I agree to cite <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887322" target="_blank" rel="noopener">Chacon, Kothari, Morillon, and Seagraves (2025)</a> if I use the CREATE scores.</span>
-                  </label>
-                </div>
                 <div class="honeypot" aria-hidden="true">
                   <label for="download-website">Leave this field empty</label>
                   <input id="download-website" name="website" tabindex="-1" autocomplete="off">
@@ -137,7 +121,6 @@
               <p class="eyebrow">Ready for your research</p>
               <h2 id="success-title" tabindex="-1">Your data are ready.</h2>
               <p id="success-message">Thank you for introducing yourself. Download your selected files below.</p>
-              <p class="data-citation-note" id="success-citation" hidden></p>
               <div class="download-links" id="download-links"></div>
               <button type="button" class="text-button" id="download-reset">Choose different files</button>
             </div>
@@ -150,7 +133,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/download-config.js?v=registration-live-1"></script>
-  <script src="js/datasets.js?v=create-scores-1"></script>
-  <script src="js/downloads.js?v=create-scores-1"></script>
+  <script src="js/datasets.js?v=create-scores-2"></script>
+  <script src="js/downloads.js?v=create-scores-2"></script>
 </body>
 </html>

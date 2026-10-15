@@ -38,7 +38,6 @@ function doPost(event) {
   if (data.website || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254 ||
       !name || name.length > 120 || !affiliation || affiliation.length > 200 ||
       !Object.prototype.hasOwnProperty.call(allowedDatasets, dataset) ||
-      (dataset === 'create-sector-scores' && data.citation !== 'agreed') ||
       !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(requestId)) {
     return registrationResponse_({ ok: false, error: 'invalid_submission' });
   }

@@ -46,11 +46,9 @@ test('ignores a legacy update flag and does not subscribe users', () => {
   assert.equal(app.rows[0][5], 'No');
 });
 
-test('CREATE registration requires citation acknowledgment and records its own dataset name', () => {
+test('CREATE registration records its own dataset name', () => {
   const app = service();
-  assert.equal(app.post({ ...valid, dataset: 'create-sector-scores' }).ok, false);
-  assert.equal(app.rows.length, 0);
-  assert.deepEqual(app.post({ ...valid, dataset: 'create-sector-scores', citation: 'agreed' }), {
+  assert.deepEqual(app.post({ ...valid, dataset: 'create-sector-scores' }), {
     ok: true, requestId: valid.request_id
   });
   assert.equal(app.rows.length, 1);
