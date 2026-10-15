@@ -1,5 +1,4 @@
 /* Editorial research layout: readable controls and room for the paper figures. */
-.research-page { --max-width: 1320px; }
 
 .research-container {
   --color-accent: #365b70;

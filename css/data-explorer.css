@@ -4,26 +4,35 @@
 .data-layout { grid-template-columns: minmax(0, 1fr) 340px; gap: 48px; padding-top: 5px; }
 .dataset-heading { display: flex; justify-content: space-between; gap: 20px; align-items: start; margin-bottom: 17px; }
 .data-card-title { font-size: 1.75rem; margin: 0; line-height: 1.25; }
-.dataset-get { flex-shrink: 0; border: 1px solid #b7c1c7; border-radius: 3px; background: #fff; color: #365b70; padding: 7px 12px; font-size: .75rem; }
+.dataset-get { flex-shrink: 0; min-height: 44px; border: 1px solid #b7c1c7; border-radius: 3px; background: #fff; color: #365b70; padding: 7px 12px; font-size: .875rem; }
 .dataset-get:hover { background: #f1f4f6; }
-.data-description { font-size: .875rem; }
-.dataset-meta { margin: 16px 0 21px; font-size: .6875rem; gap: 8px 20px; }
-.data-note { font-size: .75rem; }
+.data-description { font-size: .9375rem; }
+.dataset-meta { margin: 16px 0 25px; font-size: .8125rem; gap: 8px 20px; }
+.data-note { font-size: .8125rem; }
 .access-card { padding: 24px; border-top: 1px solid #ccd4d9; box-shadow: none; border-radius: 3px; scroll-margin-top: 25px; }
 .access-card:focus-within { border-color: #7894a6; }
 .access-card h2 { margin-top: 0; }
 .access-card .success-icon { display: none; }
 .download-success .button { background: #365b70; }
-.sector-control { display: flex; gap: 14px; align-items: center; margin: 6px 0 4px; }
-.sector-control label { font-size: .75rem; color: #58656f; }
-.sector-control select { background: #fff; color: #242424; padding: 7px 25px 7px 10px; border: 1px solid #c8d0d5; border-radius: 3px; font-size: .75rem; max-width: 190px; }
-.sector-chart { position: relative; min-height: 238px; }
+.explorer-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; margin: 6px 0 16px; }
+.sector-control { display: flex; gap: 14px; align-items: center; }
+.sector-control label { font-size: .875rem; color: var(--color-text-secondary); }
+.sector-control select { min-height: 44px; background: #fff; color: var(--color-accent); padding: 8px 24px 8px 0; border: 0; border-bottom: 1px solid #a5b5be; border-radius: 0; font: 500 .9375rem var(--font-body); max-width: 190px; cursor: pointer; }
+.sector-control select:hover { border-bottom-color: var(--color-accent); }
+.score-readout { display: flex; align-items: baseline; justify-content: flex-end; gap: 14px; margin-left: auto; font-variant-numeric: tabular-nums; }
+.score-readout[hidden] { display: none; }
+.score-date { color: var(--color-text-secondary); font-size: .875rem; }
+.score-value { color: var(--color-accent); font: 500 1.125rem var(--font-body); min-width: 5ch; text-align: right; }
+.score-value.is-missing { font-size: .875rem; color: var(--color-text-secondary); }
+.sector-chart { position: relative; min-height: 320px; }
 .score-svg { display: block; width: 100%; overflow: visible; }
-.score-svg text { font: 400 11px var(--font-body); fill: #596772; }
-.score-svg .score-axis { stroke: #c3ccd2; }
-.score-svg .score-grid { stroke: #e3e8eb; }
-.score-tooltip { position: absolute; pointer-events: none; top: 2px; right: 0; background: #fff; color: #365b70; border: 1px solid #d5dde2; border-radius: 3px; padding: 5px 9px; font-size: .6875rem; font-variant-numeric: tabular-nums; }
-.score-chart-status { color: var(--color-text-secondary); font-size: .75rem; padding: 24px 0; }
+.score-svg[hidden] { display: none; }
+.score-svg text { font: 400 13px var(--font-body); fill: #63717a; }
+.score-svg .score-axis { stroke: #e7ecee; }
+.score-svg .score-grid { stroke: #edf0f2; }
+.score-svg .score-zero { stroke: #a8b7bf; stroke-width: 1.2; }
+.score-svg .score-line { stroke: #365b70; stroke-width: 2; }
+.score-chart-status { color: var(--color-text-secondary); font-size: .875rem; padding: 24px 0; }
 .chart-screen-reader { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 @media (max-width: 900px) {
   .data-layout { grid-template-columns: minmax(0, 1fr) 300px; gap: 28px; }
@@ -37,7 +46,12 @@
   .sector-control select { font-size: 1rem; }
   .dataset-get, .sector-control select { min-height: 44px; }
 }
+@media (max-width: 480px) {
+  .sector-chart { min-height: 280px; }
+  .explorer-toolbar { gap: 12px; }
+  .score-readout { width: 100%; justify-content: space-between; }
+}
 @media print {
   .data-layout { display: block; }
-  .dataset-get, .score-tooltip { display: none; }
+  .dataset-get, .score-readout { display: none; }
 }

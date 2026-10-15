@@ -33,17 +33,24 @@
   var chart = document.querySelector('.sector-chart');
   var svg = document.querySelector('.score-svg');
   if (!sector || !chart || !svg) return;
-  document.querySelector('.dataset-explorer').hidden = false;
-  var tooltip = chart.querySelector('.score-tooltip');
+  var explorer = document.querySelector('.dataset-explorer');
+  var readout = explorer.querySelector('.score-readout');
+  var dateLabel = explorer.querySelector('.score-date');
+  var valueLabel = explorer.querySelector('.score-value');
+  var announcement = explorer.querySelector('.score-announcement');
+  explorer.hidden = false;
   var status = chart.querySelector('.score-chart-status');
   var series;
   var rows;
   var selectedIndex = null;
+  var hoverIndex = null;
+  var lastPointerType = 'mouse';
+  var framePending = false;
   var plotWidth;
   var guide;
   var dot;
-  var margin = { top: 28, right: 12, bottom: 38, left: 43 };
-  var height = 235;
+  var margin = { top: 20, right: 24, bottom: 44, left: 54 };
+  var height = 320;
   var monthFormat = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 
   function add(tag, attributes, text) {
@@ -59,28 +66,47 @@
   function y(value) {
     return margin.top + (1 - value) * (height - margin.top - margin.bottom) / 2;
   }
-  function hidePoint() {
-    if (guide) guide.setAttribute('visibility', 'hidden');
-    if (dot) dot.setAttribute('visibility', 'hidden');
-    tooltip.hidden = true;
+  function currentIndex() {
+    if (hoverIndex !== null) return hoverIndex;
+    return selectedIndex === null ? rows.length - 1 : selectedIndex;
   }
-  function inspect(index) {
-    selectedIndex = Math.max(0, Math.min(rows.length - 1, index));
-    var point = rows[selectedIndex];
-    guide.setAttribute('x1', x(selectedIndex));
-    guide.setAttribute('x2', x(selectedIndex));
-    guide.setAttribute('visibility', 'visible');
-    dot.setAttribute('cx', x(selectedIndex));
+  function showPoint(announce) {
+    if (!rows || !guide || !dot) return;
+    var index = currentIndex();
+    var point = rows[index];
+    var date = monthFormat.format(new Date(point[0] + '-01T00:00:00Z'));
+    var value = point[1] === null ? 'Not available' :
+      (point[1] > 0 ? '+' : '') + point[1].toFixed(3).replace('-', '\u2212');
+    guide.setAttribute('x1', x(index));
+    guide.setAttribute('x2', x(index));
+    guide.setAttribute('visibility', selectedIndex !== null || hoverIndex !== null ? 'visible' : 'hidden');
+    dot.setAttribute('cx', x(index));
     dot.setAttribute('cy', y(point[1] === null ? 0 : point[1]));
     dot.setAttribute('visibility', point[1] === null ? 'hidden' : 'visible');
-    tooltip.textContent = monthFormat.format(new Date(point[0] + '-01T00:00:00Z')) + ' · ' +
-      (point[1] === null ? 'Not available' : point[1].toFixed(3));
-    tooltip.hidden = false;
+    dateLabel.textContent = date;
+    valueLabel.textContent = value;
+    valueLabel.classList.toggle('is-missing', point[1] === null);
+    readout.hidden = false;
+    // Pointer exploration stays quiet; only deliberate keyboard/touch changes are announced.
+    if (announce) {
+      announcement.textContent = sector.options[sector.selectedIndex].text + ', ' + date + ', ' +
+        (point[1] === null ? 'score not available' : 'CREATE score ' + value);
+    }
+  }
+  function resetSelection(announce) {
+    selectedIndex = null;
+    hoverIndex = null;
+    showPoint(announce);
+    if (!announce) announcement.textContent = '';
   }
   function draw() {
+    framePending = false;
     if (!series) return;
     var width = Math.round(chart.getBoundingClientRect().width);
     if (width < 100) return;
+    height = window.innerWidth <= 480 ? 280 : 320;
+    margin.left = width < 380 ? 46 : 54;
+    margin.right = width < 380 ? 18 : 24;
     rows = series[sector.value];
     plotWidth = width - margin.left - margin.right;
     svg.replaceChildren();
@@ -91,14 +117,12 @@
     add('title', {}, name + ' monthly CREATE scores, 1994–2023');
     add('desc', {}, 'Monthly score between minus one and plus one. Missing observations are gaps.');
     [-1, -0.5, 0, 0.5, 1].forEach(function (value) {
-      add('line', { x1: margin.left, x2: width - margin.right, y1: y(value), y2: y(value), class: 'score-grid' });
-      add('text', { x: margin.left - 9, y: y(value), dy: '0.32em', 'text-anchor': 'end' }, value.toFixed(1));
+      add('line', { x1: margin.left, x2: width - margin.right, y1: y(value), y2: y(value), class: value === 0 ? 'score-zero' : 'score-grid' });
+      add('text', { x: margin.left - 11, y: y(value), dy: '0.32em', 'text-anchor': 'end' }, value.toFixed(1).replace('-', '\u2212'));
     });
-    add('line', { x1: margin.left, x2: width - margin.right, y1: height - margin.bottom, y2: height - margin.bottom, class: 'score-axis' });
     (width < 380 ? [1994, 2009, 2023] : [1994, 2004, 2014, 2023]).forEach(function (year) {
-      add('text', { x: x((year - 1994) * 12), y: height - margin.bottom + 20, 'text-anchor': 'middle' }, String(year));
+      add('text', { x: x((year - 1994) * 12), y: height - margin.bottom + 28, 'text-anchor': 'middle' }, String(year));
     });
-    add('text', { x: margin.left, y: 13 }, 'CREATE score');
     var path = '';
     var inSegment = false;
     rows.forEach(function (point, index) {
@@ -109,33 +133,60 @@
         inSegment = true;
       }
     });
-    add('path', { d: path, fill: 'none', stroke: '#356583', 'stroke-width': 1.65 });
-    guide = add('line', { y1: margin.top, y2: height - margin.bottom, stroke: '#a7b6c0', visibility: 'hidden' });
-    dot = add('circle', { r: 3.5, fill: '#356583', visibility: 'hidden' });
+    add('path', { d: path, fill: 'none', stroke: '#365b70', 'stroke-width': 2, class: 'score-line' });
+    guide = add('line', { y1: margin.top, y2: height - margin.bottom, stroke: '#a7b6c0', visibility: 'hidden', class: 'score-guide' });
+    dot = add('circle', { r: 4, fill: '#365b70', stroke: '#fff', 'stroke-width': 1.5, visibility: 'hidden', class: 'score-point' });
     var hitArea = add('rect', { x: margin.left, y: margin.top, width: plotWidth, height: height - margin.top - margin.bottom, fill: 'transparent' });
-    function pointAt(event) {
+    function indexAt(event) {
       var bounds = svg.getBoundingClientRect();
       var pointer = (event.clientX - bounds.left) * width / bounds.width;
-      inspect(Math.round((pointer - margin.left) * (rows.length - 1) / plotWidth));
+      return Math.max(0, Math.min(rows.length - 1, Math.round((pointer - margin.left) * (rows.length - 1) / plotWidth)));
     }
-    hitArea.addEventListener('pointermove', pointAt);
-    hitArea.addEventListener('click', pointAt);
-    hitArea.addEventListener('pointerleave', hidePoint);
-    hidePoint();
+    hitArea.addEventListener('pointerdown', function (event) { lastPointerType = event.pointerType || 'mouse'; });
+    hitArea.addEventListener('pointermove', function (event) {
+      if (event.pointerType === 'touch') return;
+      hoverIndex = indexAt(event);
+      showPoint(false);
+    });
+    hitArea.addEventListener('click', function (event) {
+      var touch = (event.pointerType || lastPointerType) !== 'mouse';
+      var index = indexAt(event);
+      selectedIndex = touch ? index : null;
+      hoverIndex = touch ? null : index;
+      if (touch) svg.focus({ preventScroll: true });
+      showPoint(touch);
+    });
+    hitArea.addEventListener('pointerleave', function () {
+      hoverIndex = null;
+      showPoint(false);
+    });
+    showPoint(false);
   }
-  sector.addEventListener('change', function () { selectedIndex = null; draw(); });
+  function scheduleDraw() {
+    if (framePending) return;
+    framePending = true;
+    window.requestAnimationFrame(draw);
+  }
+  sector.addEventListener('change', function () {
+    selectedIndex = null;
+    hoverIndex = null;
+    draw();
+    showPoint(true);
+  });
   svg.addEventListener('keydown', function (event) {
     if (!rows || !['ArrowLeft', 'ArrowRight', 'Home', 'End', 'Escape'].includes(event.key)) return;
     event.preventDefault();
-    if (event.key === 'Escape') return hidePoint();
-    var index = selectedIndex === null ? rows.length - 1 : selectedIndex;
+    if (event.key === 'Escape') return resetSelection(true);
+    var index = currentIndex();
     if (event.key === 'ArrowLeft') index -= 1;
     if (event.key === 'ArrowRight') index += 1;
     if (event.key === 'Home') index = 0;
     if (event.key === 'End') index = rows.length - 1;
-    inspect(index);
+    selectedIndex = Math.max(0, Math.min(rows.length - 1, index));
+    hoverIndex = null;
+    showPoint(true);
   });
-  svg.addEventListener('blur', hidePoint);
+  svg.addEventListener('blur', function () { resetSelection(false); });
 
   fetch('data/create-sector-scores.json', { credentials: 'omit' })
     .then(function (response) {
@@ -158,11 +209,12 @@
       svg.removeAttribute('hidden');
       sector.disabled = false;
       draw();
-      if (window.ResizeObserver) new ResizeObserver(draw).observe(chart);
-      else window.addEventListener('resize', draw);
+      if (window.ResizeObserver) new ResizeObserver(scheduleDraw).observe(chart);
+      window.addEventListener('resize', scheduleDraw);
     })
     .catch(function () {
       status.textContent = 'Chart unavailable. You can still request the data.';
       svg.setAttribute('hidden', '');
+      readout.hidden = true;
     });
 }());

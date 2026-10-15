@@ -9,7 +9,7 @@
   --color-border: #e2e2e2;
   --font-heading: 'Source Serif 4', Georgia, serif;
   --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  --max-width: 1120px;
+  --max-width: 1320px;
   --nav-height: 100px;
   --radius: 5px;
 }
@@ -74,7 +74,7 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.
 .page-header h1 { font-size: clamp(2.5rem, 5vw, 3.4rem); letter-spacing: -.04em; margin: 10px 0 17px; }
 .page-header > p:not(.eyebrow) { max-width: 640px; font-size: .94rem; color: var(--color-text-secondary); }
 .page-header a, .data-description a, .data-note a, .data-citation-note a, .form-privacy a { text-decoration: underline; text-underline-offset: 3px; }
-.research-container { max-width: 980px; }
+.research-container { max-width: var(--max-width); }
 .section-nav { display: flex; gap: 28px; list-style: none; border-bottom: 1px solid var(--color-border); padding-bottom: 20px; font-size: .8rem; }
 .section-nav a { display: inline-flex; gap: 8px; align-items: center; }
 .section-nav span { color: var(--color-text-secondary); font-size: .7rem; }
