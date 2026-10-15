@@ -4,13 +4,13 @@
   --color-bg-alt: #f6f6f6;
   --color-text: #242424;
   --color-text-secondary: #626262;
-  --color-accent: #3f4b58;
+  --color-accent: #365b70;
   --color-accent-hover: #171717;
   --color-border: #e2e2e2;
   --font-heading: 'Source Serif 4', Georgia, serif;
   --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  --max-width: 1040px;
-  --nav-height: 76px;
+  --max-width: 1120px;
+  --nav-height: 100px;
   --radius: 5px;
 }
 
@@ -38,7 +38,7 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.
 /* Navigation */
 .nav { background: var(--color-bg); border-bottom: 1px solid var(--color-border); }
 .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; min-height: var(--nav-height); display: flex; align-items: center; justify-content: space-between; gap: 24px; position: relative; }
-.nav-name { display: inline-flex; align-items: center; gap: 13px; font: 600 1.12rem var(--font-heading); color: var(--color-text); white-space: nowrap; }
+.nav-name { display: inline-flex; align-items: center; gap: 13px; font: 600 2rem var(--font-heading); letter-spacing: -.035em; color: var(--color-text); white-space: nowrap; }
 .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
 .nav-links a { display: inline-block; color: var(--color-text-secondary); font-size: .875rem; padding: 9px 0; border-bottom: 2px solid transparent; }
 .nav-links a:hover, .nav-links a.active { color: var(--color-text); border-bottom-color: var(--color-text); }
@@ -51,9 +51,9 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.
 .home-page .nav-inner { min-height: 110px; }
 .home-page .nav-inner::after { content: ''; position: absolute; bottom: 0; left: 32px; right: 32px; border-bottom: 1px solid var(--color-border); }
 .home-page .nav-name { font-size: 2rem; letter-spacing: -.035em; }
-.hero { padding: 66px 0 60px; }
-.hero-inner { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 64px; align-items: start; }
-.hero-bio { color: var(--color-text); font-size: 1rem; line-height: 1.8; max-width: 620px; margin-bottom: 27px; }
+.hero { padding: 54px 0 46px; }
+.hero-inner { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 58px; align-items: start; }
+.hero-bio { color: var(--color-text); font-size: 1rem; line-height: 1.8; max-width: 680px; margin-bottom: 27px; }
 .hero-bio p { font: 400 1.35rem/1.6 var(--font-heading); letter-spacing: -.01em; }
 .hero-bio p + p { margin-top: 22px; }
 .hero-links { display: flex; align-items: center; gap: 12px; font-size: .875rem; }

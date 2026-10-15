@@ -16,7 +16,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=research-visuals-20261015">
+  <link rel="stylesheet" href="css/research-visuals.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -61,9 +62,93 @@
           <h2 class="papers-section-title" id="working-papers-title">Working Papers</h2>
         </header>
 
-        <div class="paper-card">
-          <h3 class="paper-title">Dissecting REIT Return Comovement</h3>
-          <p class="paper-authors">with Ryan Chacon, Cayman Seagraves, and Stace Sirmans</p>
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">Commercial Real Estate AI Text-Evaluation (CREATE): News-Based Signals for Predicting REIT Returns</h3>
+            <p class="paper-authors">with Ryan G. Chacon, Thibaut G. Morillon, and Cayman Seagraves</p>
+            <p class="paper-venue">Revise and Resubmit at <em>The Journal of Real Estate Finance and Economics</em></p>
+            <div class="paper-actions">
+              <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887322" target="_blank" rel="noopener"> SSRN</a>
+              <a class="paper-link" href="data-code.html#create-sector-scores"> Sector scores</a>
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">We introduce the Commercial Real Estate AI Text-Evaluation (CREATE) score, a sector-level trading signal extracted from Wall Street Journal articles using large language models (LLMs). Unlike traditional natural language processing (NLP) methods based on dictionaries or supervised classifiers, CREATE leverages the contextual reasoning of LLMs to identify relevant information from unstructured text. We apply a filtering technique to mitigate forward-looking bias that afflicts LLMs (Engelberg et al., 2025). A sector-rotation strategy that goes long (short) REIT sectors with high (low) CREATE scores generates an annualized alpha of 6 percent and performs especially well during recessions. Comparing three models, we find that models with more advanced contextual reasoning yield much stronger predictive signals. The results highlight the value of LLM-based text analysis for real estate investment and asset pricing.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: Commercial Real Estate AI Text-Evaluation (CREATE): News-Based Signals for Predicting REIT Returns" aria-expanded="false" aria-controls="research-figure-commercial-real-estate-ai-text-evaluation-create-news-based-signals-for-predicting-reit-returns">
+              <img id="research-figure-commercial-real-estate-ai-text-evaluation-create-news-based-signals-for-predicting-reit-returns" src="images/research/create-covid.webp" alt="CREATE scores through COVID: four sectors, January 2019–December 2023. Three-month rolling averages." width="1152" height="684" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
+        </div>
+
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">Checkbook Charity: What Really Drives Corporate Giving Decisions</h3>
+            <p class="paper-authors">with Stephen P. Ferris and Reza Houston</p>
+            <p class="paper-venue">Revise and Resubmit at <em>Review of Corporate Finance</em></p>
+            <div class="paper-actions">
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">This study investigates the ethical models that guide corporate philanthropic decision-making. While billions of dollars flow annually from corporations to charitable causes, there is a systematic lack of evidence concerning how CEOs navigate competing moral rationales when awarding these resources. By surveying AI-simulated executives representing S&amp;P 500 CEOs, we examine how six prominent ethical theories explain corporate philanthropic decisions. We find that corporate philanthropy reflects pragmatic ethical pluralism rather than adherence to normative principles. CEOs simultaneously endorse multiple, sometimes competing, moral logics, with risk mitigation emerging as a near-universal rationale. We discover systematic variation in philanthropic orientations across firm and individual characteristics, revealing disconnections between stated ethical principles and actual philanthropic allocations. These findings show the complex moral balancing performed by CEOs when evaluating their firm’s charitable giving. Our results challenge simplistic altruism-instrumentalism dichotomies and confirm how business pressures and individual values interact to shape corporate philanthropy.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: Checkbook Charity: What Really Drives Corporate Giving Decisions" aria-expanded="false" aria-controls="research-figure-checkbook-charity-what-really-drives-corporate-giving-decisions">
+              <img id="research-figure-checkbook-charity-what-really-drives-corporate-giving-decisions" src="images/research/checkbook-motives.svg" alt="Six motives for corporate giving: impact maximization, strategic investment, stakeholder management, institutional responsibility, risk mitigation, and values expression. Conceptual diagram; sizes do not encode empirical weights." width="700" height="450" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
+        </div>
+
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">When Dividends Deceive: Mispricing in Public Real Estate Markets</h3>
+            <p class="paper-authors">with Ryan G. Chacon, Thibaut G. Morillon, and Sugata Ray</p>
+            <p class="paper-venue">Revise and Resubmit at <em>The Journal of Real Estate Finance and Economics</em></p>
+            <div class="paper-actions">
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">We investigate the free dividends fallacy in equity Real Estate Investment Trusts (REITs). The mandatory REIT payout requirement renders the propensity to pay dividends exogenous to firm quality, isolating behavioral preferences from rational quality signaling. Using a comprehensive panel of REIT dividend events from 1980 to 2023, we find that REIT returns are elevated in predicted dividend months, consistent with price pressure from dividend-seeking investors. Dividend-window returns are positively related to dividend yield, negatively related to interest rates, and negatively related to past market performance. These price patterns subsequently reverse, and insiders trade strategically to exploit the predictable mispricing. These results hold among REITs that would be least likely to pay dividends absent regulatory requirements, consistent with the presence of a free dividends fallacy.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: When Dividends Deceive: Mispricing in Public Real Estate Markets" aria-expanded="false" aria-controls="research-figure-when-dividends-deceive-mispricing-in-public-real-estate-markets">
+              <img id="research-figure-when-dividends-deceive-mispricing-in-public-real-estate-markets" src="images/research/dividend-months.webp" alt="Average returns and return standard deviation by month since the last dividend. Returns peak at the quarterly intervals." width="1400" height="830" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
+        </div>
+
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">Dissecting REIT Return Comovement</h3>
+            <p class="paper-authors">with Ryan Chacon, Cayman Seagraves, and Stace Sirmans</p>
+            <div class="paper-actions">
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">Observed REIT properties provide an operating comparison for interpreting connected-stock co-movement. Detailed property overlap is positively associated with return correlation and aggregate funds-from-operations growth correlation. Owners and analysts add return information conditional on the property measures; analysts have weaker positive operating evidence, while ownership’s operating association is imprecise. All four dated connections, including dominant property type, describe annual return dependence beyond size, factor-implied correlation and recent return history. The comparisons establish complementary information in operating assets and financial relationships without decomposing fundamental return news. In a 2006–2023 allocation exercise, the property correlation procedure raises the annual certainty equivalent by 2.04 percentage points relative to raw historical correlation, mainly through higher realized means. The portfolio gain evaluates the complete forecasting procedure because an otherwise identical regression without connections is unavailable.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: Dissecting REIT Return Comovement" aria-expanded="false" aria-controls="research-figure-dissecting-reit-return-comovement">
+              <img id="research-figure-dissecting-reit-return-comovement" src="images/research/comovement-shares.webp" alt="Shares of explained REIT return comovement attributed to four connection measures, with 95 percent confidence intervals." width="1251" height="813" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
         <div class="paper-card">
@@ -76,50 +161,6 @@
           <p class="paper-authors">with Shannon Chen, Casey Schwab, Bridget Stomberg, and Junwei Xia</p>
         </div>
 
-        <div class="paper-card">
-          <h3 class="paper-title">When Dividends Deceive: Mispricing in Public Real Estate Markets</h3>
-          <p class="paper-authors">with Ryan G. Chacon, Thibaut G. Morillon, and Sugata Ray</p>
-          <p class="paper-venue">Revise and Resubmit at <em>The Journal of Real Estate Finance and Economics</em></p>
-          <div class="paper-actions">
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
-            </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">We investigate the free dividends fallacy in equity Real Estate Investment Trusts (REITs). The mandatory REIT payout requirement renders the propensity to pay dividends exogenous to firm quality, isolating behavioral preferences from rational quality signaling. Using a comprehensive panel of REIT dividend events from 1980 to 2023, we find that REIT returns are elevated in predicted dividend months, consistent with price pressure from dividend-seeking investors. Dividend-window returns are positively related to dividend yield, negatively related to interest rates, and negatively related to past market performance. These price patterns subsequently reverse, and insiders trade strategically to exploit the predictable mispricing. These results hold among REITs that would be least likely to pay dividends absent regulatory requirements, consistent with the presence of a free dividends fallacy.</p>
-          </div>
-        </div>
-
-        <div class="paper-card">
-          <h3 class="paper-title">Commercial Real Estate AI Text-Evaluation (CREATE): News-Based Signals for Predicting REIT Returns</h3>
-          <p class="paper-authors">with Ryan G. Chacon, Thibaut G. Morillon, and Cayman Seagraves</p>
-          <p class="paper-venue">Revise and Resubmit at <em>The Journal of Real Estate Finance and Economics</em></p>
-          <div class="paper-actions">
-            <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887322" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> SSRN</a>
-            <a class="paper-link" href="data-code.html#create-sector-scores"><i class="fa-solid fa-table-cells" aria-hidden="true"></i> Sector scores</a>
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
-            </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">We introduce the Commercial Real Estate AI Text-Evaluation (CREATE) score, a sector-level trading signal extracted from Wall Street Journal articles using large language models (LLMs). Unlike traditional natural language processing (NLP) methods based on dictionaries or supervised classifiers, CREATE leverages the contextual reasoning of LLMs to identify relevant information from unstructured text. We apply a filtering technique to mitigate forward-looking bias that afflicts LLMs (Engelberg et al., 2025). A sector-rotation strategy that goes long (short) REIT sectors with high (low) CREATE scores generates an annualized alpha of 6 percent and performs especially well during recessions. Comparing three models, we find that models with more advanced contextual reasoning yield much stronger predictive signals. The results highlight the value of LLM-based text analysis for real estate investment and asset pricing.</p>
-          </div>
-        </div>
-
-        <div class="paper-card">
-          <h3 class="paper-title">Checkbook Charity: What Really Drives Corporate Giving Decisions</h3>
-          <p class="paper-authors">with Stephen P. Ferris and Reza Houston</p>
-          <p class="paper-venue">Revise and Resubmit at <em>Review of Corporate Finance</em></p>
-          <div class="paper-actions">
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
-            </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">This study investigates the ethical models that guide corporate philanthropic decision-making. While billions of dollars flow annually from corporations to charitable causes, there is a systematic lack of evidence concerning how CEOs navigate competing moral rationales when awarding these resources. By surveying AI-simulated executives representing S&amp;P 500 CEOs, we examine how six prominent ethical theories explain corporate philanthropic decisions. We find that corporate philanthropy reflects pragmatic ethical pluralism rather than adherence to normative principles. CEOs simultaneously endorse multiple, sometimes competing, moral logics, with risk mitigation emerging as a near-universal rationale. We discover systematic variation in philanthropic orientations across firm and individual characteristics, revealing disconnections between stated ethical principles and actual philanthropic allocations. These findings show the complex moral balancing performed by CEOs when evaluating their firm’s charitable giving. Our results challenge simplistic altruism-instrumentalism dichotomies and confirm how business pressures and individual values interact to shape corporate philanthropy.</p>
-          </div>
-        </div>
-
       </section>
 
       <!-- ═══════════════════════════════════════════
@@ -130,138 +171,210 @@
           <h2 class="papers-section-title" id="publications-title">Publications</h2>
         </header>
 
-        <div class="paper-card">
-          <h3 class="paper-title">Board Quality and the Public Purse: A Study of Government Subsidies and Corporate Governance</h3>
-          <p class="paper-authors">with Stephen P. Ferris, Reza Houston, and Narayanan Jayaraman</p>
-          <p class="paper-venue"><em>Journal of Financial Research</em>, Forthcoming</p>
-          <div class="paper-actions">
-            <a class="paper-link" href="https://onlinelibrary.wiley.com/doi/10.1111/jfir.70046" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper</a>
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">Board Quality and the Public Purse: A Study of Government Subsidies and Corporate Governance</h3>
+            <p class="paper-authors">with Stephen P. Ferris, Reza Houston, and Narayanan Jayaraman</p>
+            <p class="paper-venue"><em>Journal of Financial Research</em>, Forthcoming</p>
+            <div class="paper-actions">
+              <a class="paper-link" href="https://onlinelibrary.wiley.com/doi/10.1111/jfir.70046" target="_blank" rel="noopener"> Paper</a>
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">Given the implicit management responsibilities inherent in the duties of loyalty, care, and good faith charged to directors, we use the leadership literature to develop a new measure of director quality. With our integrated leadership model of director quality, we explore the relation between board quality and a firm's success with government subsidies. We find that firms with higher-quality boards secure more subsidies, receive subsidies more consistently, and more efficiently use subsidies to enhance financial performance. We confirm the causal relation between board quality and subsidies using the launch of two federal subsidy programs as exogenous shocks.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: Board Quality and the Public Purse: A Study of Government Subsidies and Corporate Governance" aria-expanded="false" aria-controls="research-figure-board-quality-and-the-public-purse-a-study-of-government-subsidies-and-corporate-governance">
+              <img id="research-figure-board-quality-and-the-public-purse-a-study-of-government-subsidies-and-corporate-governance" src="images/research/fma-board-categories.svg" alt="The five dimensions of director quality: higher education, creativity, experience, talent, and social capital. Adapted from the FMA 2024 presentation. Equal sectors identify categories, not empirical weights." width="700" height="520" loading="lazy" decoding="async">
             </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">Given the implicit management responsibilities inherent in the duties of loyalty, care, and good faith charged to directors, we use the leadership literature to develop a new measure of director quality. With our integrated leadership model of director quality, we explore the relation between board quality and a firm's success with government subsidies. We find that firms with higher-quality boards secure more subsidies, receive subsidies more consistently, and more efficiently use subsidies to enhance financial performance. We confirm the causal relation between board quality and subsidies using the launch of two federal subsidy programs as exogenous shocks.</p>
-          </div>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
-        <div class="paper-card">
-          <h3 class="paper-title">What Performance Measures Do Real Estate Investors Chase?</h3>
-          <p class="paper-authors">with Ryan G. Chacon, William G. Hardin III, and Thibaut G. Morillon</p>
-          <p class="paper-venue"><em>The Journal of Real Estate Finance and Economics</em>, Forthcoming</p>
-          <div class="paper-actions">
-            <a class="paper-link" href="https://link.springer.com/article/10.1007/s11146-026-10049-8" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper</a>
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">What Performance Measures Do Real Estate Investors Chase?</h3>
+            <p class="paper-authors">with Ryan G. Chacon, William G. Hardin III, and Thibaut G. Morillon</p>
+            <p class="paper-venue"><em>The Journal of Real Estate Finance and Economics</em>, Forthcoming</p>
+            <div class="paper-actions">
+              <a class="paper-link" href="https://link.springer.com/article/10.1007/s11146-026-10049-8" target="_blank" rel="noopener"> Paper</a>
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">We examine how retail and institutional real estate investors benchmark fund performance across a comprehensive set of performance metrics. Our analysis focuses on a subset of real estate funds for which fund flows, investor type (retail vs. institutional), and risk-adjusted performance are observable. We find that benchmarking practices differ systematically by investor type. Retail investors respond primarily to raw, unadjusted returns, whereas institutional investors are most sensitive to risk-adjusted performance, particularly CAPM alphas estimated using a real estate index as the market benchmark. Although multifactor models most accurately explain historical fund performance, they exert limited influence on the investment decisions or benchmarking practices of either investor group. Ultimately, what drives performance may not be what drives capital.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: What Performance Measures Do Real Estate Investors Chase?" aria-expanded="false" aria-controls="research-figure-what-performance-measures-do-real-estate-investors-chase">
+              <img id="research-figure-what-performance-measures-do-real-estate-investors-chase" src="images/research/performance-benchmarks.webp" alt="Average annualized net alpha under six alternative benchmark models, combined sample." width="1095" height="657" loading="lazy" decoding="async">
             </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">We examine how retail and institutional real estate investors benchmark fund performance across a comprehensive set of performance metrics. Our analysis focuses on a subset of real estate funds for which fund flows, investor type (retail vs. institutional), and risk-adjusted performance are observable. We find that benchmarking practices differ systematically by investor type. Retail investors respond primarily to raw, unadjusted returns, whereas institutional investors are most sensitive to risk-adjusted performance, particularly CAPM alphas estimated using a real estate index as the market benchmark. Although multifactor models most accurately explain historical fund performance, they exert limited influence on the investment decisions or benchmarking practices of either investor group. Ultimately, what drives performance may not be what drives capital.</p>
-          </div>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
-        <div class="paper-card">
-          <h3 class="paper-title">More Risk, More Reward: The Role of Tenant Concentration in Shaping Equity-Based Compensation</h3>
-          <p class="paper-authors">with Ryan G. Chacon, Zifeng Feng, and Joseph Ooi</p>
-          <p class="paper-venue"><em>The Journal of Real Estate Finance and Economics</em>, Forthcoming</p>
-          <div class="paper-actions">
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">More Risk, More Reward: The Role of Tenant Concentration in Shaping Equity-Based Compensation</h3>
+            <p class="paper-authors">with Ryan G. Chacon, Zifeng Feng, and Joseph Ooi</p>
+            <p class="paper-venue"><em>The Journal of Real Estate Finance and Economics</em>, Forthcoming</p>
+            <div class="paper-actions">
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">This study examines how tenant concentration risk influences CEO compensation design. We find that boards of listed equity Real Estate Investment Trusts (REITs) with concentrated property portfolios design CEO pay packages to encourage risk-taking. These incentives help mitigate moral hazard concerns between risk-averse CEOs and diversified shareholders. The positive relationship between tenant concentration and risk-taking incentives awarded to CEOs holds after accounting for potential reverse causality. The effect is amplified when the concentrated tenant base comprises smaller and less profitable firms. The findings are attenuated when REITs have poor growth prospects. These incentives are followed by greater firm risk-taking: CEOs with higher Vega subsequently exhibit higher systematic risk and leverage and steer their portfolios toward greater concentration. Our findings suggest that REIT boards account for moral hazard and risk alignment in compensation design, moving beyond generic market-based risks to firm- and tenant-specific considerations.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: More Risk, More Reward: The Role of Tenant Concentration in Shaping Equity-Based Compensation" aria-expanded="false" aria-controls="research-figure-more-risk-more-reward-the-role-of-tenant-concentration-in-shaping-equity-based-compensation">
+              <img id="research-figure-more-risk-more-reward-the-role-of-tenant-concentration-in-shaping-equity-based-compensation" src="images/research/tenant-risk-incentives.svg" alt="Conceptual illustration of concentrated tenant exposure and stronger CEO risk-taking incentives through pay Vega, followed by greater firm risk-taking. No numerical magnitudes are depicted." width="800" height="420" loading="lazy" decoding="async">
             </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">This study examines how tenant concentration risk influences CEO compensation design. We find that boards of listed equity Real Estate Investment Trusts (REITs) with concentrated property portfolios design CEO pay packages to encourage risk-taking. These incentives help mitigate moral hazard concerns between risk-averse CEOs and diversified shareholders. The positive relationship between tenant concentration and risk-taking incentives awarded to CEOs holds after accounting for potential reverse causality. The effect is amplified when the concentrated tenant base comprises smaller and less profitable firms. The findings are attenuated when REITs have poor growth prospects. These incentives are followed by greater firm risk-taking: CEOs with higher Vega subsequently exhibit higher systematic risk and leverage and steer their portfolios toward greater concentration. Our findings suggest that REIT boards account for moral hazard and risk alignment in compensation design, moving beyond generic market-based risks to firm- and tenant-specific considerations.</p>
-          </div>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
-        <div class="paper-card">
-          <h3 class="paper-title">From Boardroom to Balance Sheet: How Director Quality Affects Accounting Practices and Disclosures</h3>
-          <p class="paper-authors">with Stephen P. Ferris and Narayanan Jayaraman</p>
-          <p class="paper-venue"><em>Journal of Corporate Accounting &amp; Finance</em>, Forthcoming</p>
-          <div class="paper-actions">
-            <a class="paper-link" href="https://onlinelibrary.wiley.com/doi/full/10.1002/jcaf.70023" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper</a>
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">From Boardroom to Balance Sheet: How Director Quality Affects Accounting Practices and Disclosures</h3>
+            <p class="paper-authors">with Stephen P. Ferris and Narayanan Jayaraman</p>
+            <p class="paper-venue"><em>Journal of Corporate Accounting &amp; Finance</em>, Forthcoming</p>
+            <div class="paper-actions">
+              <a class="paper-link" href="https://onlinelibrary.wiley.com/doi/full/10.1002/jcaf.70023" target="_blank" rel="noopener"> Paper</a>
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">Based on the leadership responsibilities embedded in the legal duties of all directors, we construct a new model of director quality. Averaging across the quality of individual directors, we estimate the quality of the board itself and explore how it affects a firm's accounting practices. We find that higher-quality boards manage their earnings less, restate their financials less frequently, and hire higher-quality auditors. Additionally, these boards are more transparent, voluntarily disclose business risks, limit non-audit services, and are associated with higher levels of performance. We confirm causality using director death as an exogenous shock.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: From Boardroom to Balance Sheet: How Director Quality Affects Accounting Practices and Disclosures" aria-expanded="false" aria-controls="research-figure-from-boardroom-to-balance-sheet-how-director-quality-affects-accounting-practices-and-disclosures">
+              <img id="research-figure-from-boardroom-to-balance-sheet-how-director-quality-affects-accounting-practices-and-disclosures" src="images/research/fma-board-categories.svg" alt="Director-quality categories adapted from the FMA 2024 presentation: higher education, creativity, experience, talent, and social capital. Equal sectors identify categories, not empirical weights." width="700" height="520" loading="lazy" decoding="async">
             </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">Based on the leadership responsibilities embedded in the legal duties of all directors, we construct a new model of director quality. Averaging across the quality of individual directors, we estimate the quality of the board itself and explore how it affects a firm's accounting practices. We find that higher-quality boards manage their earnings less, restate their financials less frequently, and hire higher-quality auditors. Additionally, these boards are more transparent, voluntarily disclose business risks, limit non-audit services, and are associated with higher levels of performance. We confirm causality using director death as an exogenous shock.</p>
-          </div>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
-        <div class="paper-card">
-          <h3 class="paper-title">Strategic Generosity: The Business of Political Connections</h3>
-          <p class="paper-authors">with Stephen P. Ferris</p>
-          <p class="paper-venue"><em>Review of Corporate Finance</em>, Forthcoming</p>
-          <div class="paper-actions">
-            <a class="paper-link" href="https://drive.google.com/file/d/1xCmDAbntnaQOc8Jk9NkGSE5ocDPtPCfK/view" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper</a>
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">Strategic Generosity: The Business of Political Connections</h3>
+            <p class="paper-authors">with Stephen P. Ferris</p>
+            <p class="paper-venue"><em>Review of Corporate Finance</em>, Forthcoming</p>
+            <div class="paper-actions">
+              <a class="paper-link" href="https://drive.google.com/file/d/1xCmDAbntnaQOc8Jk9NkGSE5ocDPtPCfK/view" target="_blank" rel="noopener"> Paper</a>
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">We investigate the motivations behind corporate political contributions using a new survey methodology employing AI-generated agents (&ldquo;Digital Executives&rdquo;) representing S&amp;P 500 CEOs. Surveying 4,600 AI-generated agents, we find that executives primarily view political contributions as strategic investments that extract economic value and secure critical information to navigate policy landscapes. These motivations dominate rationales related to institutional legitimacy or agency considerations, particularly in the high political uncertainty environments perceived by the agents. Our results provide direct evidence of the drivers of corporate political strategy under uncertainty, highlighting the critical roles of value capture and information acquisition.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: Strategic Generosity: The Business of Political Connections" aria-expanded="false" aria-controls="research-figure-strategic-generosity-the-business-of-political-connections">
+              <img id="research-figure-strategic-generosity-the-business-of-political-connections" src="images/research/strategic-generosity.webp" alt="Word cloud from AI-generated CEO responses concerning political contributions." width="1400" height="802" loading="lazy" decoding="async">
             </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">We investigate the motivations behind corporate political contributions using a new survey methodology employing AI-generated agents (&ldquo;Digital Executives&rdquo;) representing S&amp;P 500 CEOs. Surveying 4,600 AI-generated agents, we find that executives primarily view political contributions as strategic investments that extract economic value and secure critical information to navigate policy landscapes. These motivations dominate rationales related to institutional legitimacy or agency considerations, particularly in the high political uncertainty environments perceived by the agents. Our results provide direct evidence of the drivers of corporate political strategy under uncertainty, highlighting the critical roles of value capture and information acquisition.</p>
-          </div>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
-        <div class="paper-card">
-          <h3 class="paper-title">Job Postings and Aggregate Stock Returns</h3>
-          <p class="paper-authors">with Michael S. O'Doherty</p>
-          <p class="paper-venue"><em>Journal of Financial Markets</em>, 2023</p>
-          <div class="paper-actions">
-            <a class="paper-link" href="https://www.sciencedirect.com/science/article/abs/pii/S1386418123000022" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper</a>
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">Job Postings and Aggregate Stock Returns</h3>
+            <p class="paper-authors">with Michael S. O'Doherty</p>
+            <p class="paper-venue"><em>Journal of Financial Markets</em>, 2023</p>
+            <div class="paper-actions">
+              <a class="paper-link" href="https://www.sciencedirect.com/science/article/abs/pii/S1386418123000022" target="_blank" rel="noopener"> Paper</a>
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">The job openings-to-employment ratio (JOE), defined as the number of job postings divided by the employment level, is among the strongest known predictors of the equity premium. We find that JOE outperforms a broad set of over two dozen popular predictor variables in both in-sample and out-of-sample forecasting tests. Forecasts based on JOE also produce gains of 2.91% in annualized certainty equivalent return and 0.20 in annualized Sharpe ratio relative to forecasts based on the historical mean equity premium. The empirical results are consistent with a standard production-based asset pricing model with labor inputs and search frictions.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: Job Postings and Aggregate Stock Returns" aria-expanded="false" aria-controls="research-figure-job-postings-and-aggregate-stock-returns">
+              <img id="research-figure-job-postings-and-aggregate-stock-returns" src="images/research/labor-wealth.webp" alt="Log cumulative wealth from a one-dollar investment: job-openings forecast versus historical-mean forecast, 1966–2019." width="1044" height="384" loading="lazy" decoding="async">
             </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">The job openings-to-employment ratio (JOE), defined as the number of job postings divided by the employment level, is among the strongest known predictors of the equity premium. We find that JOE outperforms a broad set of over two dozen popular predictor variables in both in-sample and out-of-sample forecasting tests. Forecasts based on JOE also produce gains of 2.91% in annualized certainty equivalent return and 0.20 in annualized Sharpe ratio relative to forecasts based on the historical mean equity premium. The empirical results are consistent with a standard production-based asset pricing model with labor inputs and search frictions.</p>
-          </div>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
-        <div class="paper-card">
-          <h3 class="paper-title">Economies of Scale in the Real Estate Mutual Fund Industry</h3>
-          <p class="paper-authors">with Ryan G. Chacon and Thibaut G. Morillon</p>
-          <p class="paper-venue"><em>The Journal of Real Estate Finance and Economics</em>, 2022</p>
-          <div class="paper-actions">
-            <a class="paper-link" href="https://link.springer.com/article/10.1007/s11146-022-09921-0" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper</a>
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">Economies of Scale in the Real Estate Mutual Fund Industry</h3>
+            <p class="paper-authors">with Ryan G. Chacon and Thibaut G. Morillon</p>
+            <p class="paper-venue"><em>The Journal of Real Estate Finance and Economics</em>, 2022</p>
+            <div class="paper-actions">
+              <a class="paper-link" href="https://link.springer.com/article/10.1007/s11146-022-09921-0" target="_blank" rel="noopener"> Paper</a>
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">This paper investigates the role of scale in Real Estate Mutual Fund (REMF) performance. We test the impact of both fund-level and industry-level economies of scale on fund performance. We provide consistent evidence that industry size erodes REMF performance. After controlling for endogeneity concerns, we document an insignificant relation between fund size and performance. Taken together, these findings suggest that the rapid growth of the REMF industry over the past few decades has materially impacted active managers' ability to consistently outperform their passive benchmarks. As more capital flows into the industry, competition for alpha increases, and investment opportunities dwindle. This effect is stronger in funds who are especially active in seeking out those increasingly elusive opportunities. Specifically, the effect of industry size on alpha is particularly negative for funds with higher turnover ratios, expense ratios, and volatility of returns.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: Economies of Scale in the Real Estate Mutual Fund Industry" aria-expanded="false" aria-controls="research-figure-economies-of-scale-in-the-real-estate-mutual-fund-industry">
+              <img id="research-figure-economies-of-scale-in-the-real-estate-mutual-fund-industry" src="images/research/economies-alpha-competition.svg" alt="Conceptual illustration of growing industry capital competing for limited investment opportunities and eroding fund alpha. Individual fund size has no statistically significant relation to performance after addressing endogeneity." width="700" height="378" loading="lazy" decoding="async">
             </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">This paper investigates the role of scale in Real Estate Mutual Fund (REMF) performance. We test the impact of both fund-level and industry-level economies of scale on fund performance. We provide consistent evidence that industry size erodes REMF performance. After controlling for endogeneity concerns, we document an insignificant relation between fund size and performance. Taken together, these findings suggest that the rapid growth of the REMF industry over the past few decades has materially impacted active managers' ability to consistently outperform their passive benchmarks. As more capital flows into the industry, competition for alpha increases, and investment opportunities dwindle. This effect is stronger in funds who are especially active in seeking out those increasingly elusive opportunities. Specifically, the effect of industry size on alpha is particularly negative for funds with higher turnover ratios, expense ratios, and volatility of returns.</p>
-          </div>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
-        <div class="paper-card">
-          <h3 class="paper-title">The Effect of Investor Attention on Fraud Discovery and Value Loss in Securities Class Action Litigation</h3>
-          <p class="paper-authors">with Anna Abdulmanova, Stephen P. Ferris, and Narayanan Jayaraman</p>
-          <p class="paper-venue"><em>Journal of Financial Research</em>, 44(3): 513&ndash;552, 2021</p>
-          <div class="paper-actions">
-            <a class="paper-link" href="https://onlinelibrary.wiley.com/doi/full/10.1111/jfir.12249" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper</a>
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">The Effect of Investor Attention on Fraud Discovery and Value Loss in Securities Class Action Litigation</h3>
+            <p class="paper-authors">with Anna Abdulmanova, Stephen P. Ferris, and Narayanan Jayaraman</p>
+            <p class="paper-venue"><em>Journal of Financial Research</em>, 44(3): 513&ndash;552, 2021</p>
+            <div class="paper-actions">
+              <a class="paper-link" href="https://onlinelibrary.wiley.com/doi/full/10.1111/jfir.12249" target="_blank" rel="noopener"> Paper</a>
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">We examine the effect of investor attention on value loss due to securities class action lawsuits and litigation-based fraud discovery. We find that investor attention is positively associated with damage to corporate reputation and the magnitude of the value losses suffered by defendant firms. The reputational damage to defendant firms with higher investor attention is evident from poor operational performance and lower institutional ownership after filing. Investor attention is positively associated with the diffusion of information regarding fraud and it accelerates lawsuit filing. The effects of investor attention, however, are not subsumed by the severity of the fraud. Our results are robust to a battery of tests that addresses selection and endogeneity concerns.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: The Effect of Investor Attention on Fraud Discovery and Value Loss in Securities Class Action Litigation" aria-expanded="false" aria-controls="research-figure-the-effect-of-investor-attention-on-fraud-discovery-and-value-loss-in-securities-class-action-litigation">
+              <img id="research-figure-the-effect-of-investor-attention-on-fraud-discovery-and-value-loss-in-securities-class-action-litigation" src="images/research/investor-attention.webp" alt="Weekly Google Search Activity and media coverage for Macy’s, January 2004–December 2014. Original Figure 2, Panel B." width="900" height="554" loading="lazy" decoding="async">
             </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">We examine the effect of investor attention on value loss due to securities class action lawsuits and litigation-based fraud discovery. We find that investor attention is positively associated with damage to corporate reputation and the magnitude of the value losses suffered by defendant firms. The reputational damage to defendant firms with higher investor attention is evident from poor operational performance and lower institutional ownership after filing. Investor attention is positively associated with the diffusion of information regarding fraud and it accelerates lawsuit filing. The effects of investor attention, however, are not subsumed by the severity of the fraud. Our results are robust to a battery of tests that addresses selection and endogeneity concerns.</p>
-          </div>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
-        <div class="paper-card">
-          <h3 class="paper-title">Bragging Rights: Does Corporate Boasting Imply Value Creation?</h3>
-          <p class="paper-authors">with Don M. Chance and Stephen P. Ferris</p>
-          <p class="paper-venue"><em>Journal of Corporate Finance</em>, 67: 101863, 2021</p>
-          <div class="paper-actions">
-            <a class="paper-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0929119920303072" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Paper</a>
-            <button class="abstract-toggle" onclick="toggleAbstract(this)">
-              <span class="chevron">&#9654;</span> Abstract
+        <div class="paper-card paper-feature">
+          <div class="paper-copy">
+            <h3 class="paper-title">Bragging Rights: Does Corporate Boasting Imply Value Creation?</h3>
+            <p class="paper-authors">with Don M. Chance and Stephen P. Ferris</p>
+            <p class="paper-venue"><em>Journal of Corporate Finance</em>, 67: 101863, 2021</p>
+            <div class="paper-actions">
+              <a class="paper-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0929119920303072" target="_blank" rel="noopener"> Paper</a>
+              <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                <span class="chevron">&#9654;</span> Abstract
+              </button>
+            </div>
+            <div class="abstract-content">
+              <p class="abstract-text">We examine S&amp;P 500 firms over 1999&ndash;2014 that characterize their annual performance with extreme positive language. Only 18% of such firms increase shareholder value, while over 80% have either negative or insignificant abnormal returns. Our evidence suggests that firms often base their claims of extreme positive performance on high raw returns or strong relative accounting performance. In comparison to firms that generate positive abnormal returns without boasting, our sample firms tend to have superior accounting performance. We conclude that boasting about performance is rarely associated with value creation and is more consistent with an emphasis on accounting metrics.</p>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <button type="button" class="figure-open" aria-label="Enlarge figure: Bragging Rights: Does Corporate Boasting Imply Value Creation?" aria-expanded="false" aria-controls="research-figure-bragging-rights-does-corporate-boasting-imply-value-creation">
+              <img id="research-figure-bragging-rights-does-corporate-boasting-imply-value-creation" src="images/research/bragging-returns.webp" alt="Cumulative abnormal returns around announcements, split into positive, negative, and insignificant prior-performance groups." width="1035" height="576" loading="lazy" decoding="async">
             </button>
-          </div>
-          <div class="abstract-content">
-            <p class="abstract-text">We examine S&amp;P 500 firms over 1999&ndash;2014 that characterize their annual performance with extreme positive language. Only 18% of such firms increase shareholder value, while over 80% have either negative or insignificant abnormal returns. Our evidence suggests that firms often base their claims of extreme positive performance on high raw returns or strong relative accounting performance. In comparison to firms that generate positive abnormal returns without boasting, our sample firms tend to have superior accounting performance. We conclude that boasting about performance is rarely associated with value creation and is more consistent with an emphasis on accounting metrics.</p>
-          </div>
+            <button type="button" class="figure-close" hidden>Close figure</button>
+          </figure>
         </div>
 
       </section>
@@ -270,5 +383,6 @@
   </main>
 
   <script src="js/main.js"></script>
+  <script src="js/research-visuals.js"></script>
 </body>
 </html>

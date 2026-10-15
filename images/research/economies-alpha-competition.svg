@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="378" viewBox="0 0 700 378" role="img" aria-label="Growing industry capital intensifies competition for limited opportunities and puts downward pressure on fund alpha; individual fund size has no significant relation after endogeneity controls.">
+<title>Industry capital and competition for alpha</title>
+<desc>Conceptual illustration of the paper's mechanism and findings. Coin stacks represent expanding aggregate industry capital, not the number or size of individual funds. Converging paths compete for a limited opportunity set. A downward alpha symbol represents the negative industry-size relation. Geometry and symbol counts are illustrative rather than quantitative.</desc>
+<rect width="700" height="378" fill="white"/>
+<g font-family="Arial, sans-serif" stroke-linecap="round" stroke-linejoin="round">
+<!-- A shared investment space, narrow at the opportunity set. -->
+<path d="M220 76C322 76 326 135 437 135L437 251C326 251 322 299 220 299Z" fill="#f0f4f3"/>
+<path d="M220 76C322 76 326 135 437 135M220 299C322 299 326 251 437 251" fill="none" stroke="#d5dfda" stroke-width="2"/>
+<!-- Expanding aggregate capital, shown as stacks rather than additional funds. -->
+<g fill="#e7edf0" stroke="#365b70" stroke-width="2.3">
+<path d="M39 257v24c0 15 58 15 58 0v-24Z"/><ellipse cx="68" cy="257" rx="29" ry="10"/>
+<path d="M39 269c0 15 58 15 58 0" fill="none"/>
+<path d="M110 207v74c0 15 58 15 58 0v-74Z"/><ellipse cx="139" cy="207" rx="29" ry="10"/>
+<path d="M110 221c0 15 58 15 58 0M110 237c0 15 58 15 58 0M110 253c0 15 58 15 58 0M110 269c0 15 58 15 58 0" fill="none"/>
+<path d="M181 133v148c0 15 58 15 58 0V133Z" fill="#d7e2e7"/><ellipse cx="210" cy="133" rx="29" ry="10"/>
+<path d="M181 149c0 15 58 15 58 0M181 169c0 15 58 15 58 0M181 189c0 15 58 15 58 0M181 209c0 15 58 15 58 0M181 229c0 15 58 15 58 0M181 249c0 15 58 15 58 0M181 269c0 15 58 15 58 0" fill="none"/>
+</g>
+<path d="M51 208C94 190 134 158 157 117" stroke="#537c65" stroke-width="3" fill="none"/>
+<path d="M143 123L159 111 160 131" stroke="#537c65" stroke-width="3" fill="none"/>
+<!-- Investment paths become crowded around a bounded opportunity set. -->
+<g stroke-width="2.5" fill="none">
+<path d="M239 145C307 145 326 159 402 159" stroke="#365b70"/>
+<path d="M239 169C308 169 330 159 402 159" stroke="#5c7b8d"/>
+<path d="M239 189C313 189 333 193 402 193" stroke="#537c65"/>
+<path d="M239 209C313 209 333 193 402 193" stroke="#74867b"/>
+<path d="M239 229C309 229 330 227 402 227" stroke="#365b70"/>
+<path d="M239 249C309 249 330 227 402 227" stroke="#5c7b8d"/>
+<path d="M239 269C309 269 330 227 402 227" stroke="#537c65"/>
+</g>
+<!-- Gold marks investment opportunities, without invented values. -->
+<path d="M411 122h36M447 122v142M411 264h36" stroke="#c9b38c" stroke-width="2" fill="none"/>
+<g fill="#f2e9d9" stroke="#927340" stroke-width="2">
+<circle cx="417" cy="159" r="13"/><circle cx="417" cy="193" r="13"/><circle cx="417" cy="227" r="13"/>
+</g>
+<g fill="#927340" text-anchor="middle" font-family="Georgia, serif" font-size="22"><text x="417" y="166">α</text><text x="417" y="200">α</text><text x="417" y="234">α</text></g>
+<!-- The direction of the main finding, not an estimated data curve. -->
+<path d="M472 194h31" stroke="#c9b38c" stroke-width="2"/>
+<path d="M496 187l8 7-8 7" stroke="#c9b38c" stroke-width="2" fill="none"/>
+<text x="563" y="226" fill="#927340" text-anchor="middle" font-family="Georgia, serif" font-size="102">α</text>
+<path d="M631 160v68M616 214l15 17 15-17" stroke="#927340" stroke-width="5" fill="none"/>
+<!-- Direct labels only; paper title and caption remain outside the artwork. -->
+<g fill="#365b70" text-anchor="middle" font-size="26">
+<text x="140" y="331"><tspan x="140">More industry</tspan><tspan x="140" dy="29">capital</tspan></text>
+<text x="382" y="331"><tspan x="382">Limited</tspan><tspan x="382" dy="29">opportunities</tspan></text>
+<text x="579" y="331"><tspan x="579">Lower</tspan><tspan x="579" dy="29">fund alpha</tspan></text>
+</g>
+</g></svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" role="img" aria-label="Tenant concentration is associated with stronger CEO risk-taking incentives, measured by Vega. Higher Vega is associated with subsequent systematic risk, leverage, and concentration.">
+<rect width="800" height="420" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#365b70;text-anchor:middle}.main{font-size:30px;font-weight:500}.detail{font-size:25px}.small{font-size:23px}.rule{fill:none;stroke:#9cabb2;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}</style>
+<rect x="42" y="112" width="55" height="145" fill="#f4f6f7" stroke="#365b70" stroke-width="2.4"/>
+<rect x="52" y="125" width="12" height="18" fill="#a6b8c2"/><rect x="52" y="151" width="12" height="18" fill="#a6b8c2"/>
+<rect x="75" y="125" width="12" height="18" fill="#a6b8c2"/><rect x="75" y="151" width="12" height="18" fill="#a6b8c2"/>
+<rect x="46" y="177" width="47" height="57" fill="#927340"/>
+<rect x="105" y="78" width="67" height="179" fill="#f4f6f7" stroke="#365b70" stroke-width="2.4"/>
+<rect x="115" y="91" width="12" height="18" fill="#a6b8c2"/><rect x="115" y="117" width="12" height="18" fill="#a6b8c2"/>
+<rect x="150" y="91" width="12" height="18" fill="#a6b8c2"/><rect x="150" y="117" width="12" height="18" fill="#a6b8c2"/>
+<rect x="109" y="177" width="59" height="57" fill="#927340"/>
+<rect x="180" y="101" width="55" height="156" fill="#f4f6f7" stroke="#365b70" stroke-width="2.4"/>
+<rect x="190" y="114" width="12" height="18" fill="#a6b8c2"/><rect x="190" y="140" width="12" height="18" fill="#a6b8c2"/>
+<rect x="213" y="114" width="12" height="18" fill="#a6b8c2"/><rect x="213" y="140" width="12" height="18" fill="#a6b8c2"/>
+<rect x="184" y="177" width="47" height="57" fill="#927340"/>
+<path d="M45 269H232M69 269V277M207 269V277" stroke="#927340" stroke-width="2.2" fill="none"/><text x="139" y="303" class="small" style="fill:#927340">Shared tenant</text>
+<path d="M246 196H287M521 196H556" class="rule"/><circle cx="246" cy="196" r="3.8" fill="#9cabb2"/><circle cx="287" cy="196" r="3.8" fill="#9cabb2"/><circle cx="521" cy="196" r="3.8" fill="#9cabb2"/><circle cx="556" cy="196" r="3.8" fill="#9cabb2"/>
+<path d="M305 77H479L501 99V281H305Z" fill="#f6f8f7" stroke="#537c65" stroke-width="2.5" stroke-linejoin="round"/><path d="M479 77V99H501" fill="#e0e9e4" stroke="#537c65" stroke-width="2.5"/>
+<text x="403" y="128" class="detail" style="fill:#537c65">CEO pay</text><text x="403" y="201" font-size="43" font-weight="500" style="fill:#537c65">Vega ↑</text><path d="M355 238H451" stroke="#537c65" stroke-width="2"/>
+<path d="M558 196H577M577 119V273M577 119H596M577 196H596M577 273H596" class="rule"/>
+<circle cx="598" cy="119" r="5.5" fill="#537c65"/><text x="616" y="127" class="detail" style="text-anchor:start">Systematic risk</text>
+<circle cx="598" cy="196" r="5.5" fill="#537c65"/><text x="616" y="204" class="detail" style="text-anchor:start">Leverage</text>
+<circle cx="598" cy="273" r="5.5" fill="#537c65"/><text x="616" y="281" class="detail" style="text-anchor:start">Concentration</text>
+<text x="139" y="347" class="main"><tspan x="139">Tenant</tspan><tspan x="139" dy="34">concentration</tspan></text>
+<text x="403" y="347" class="main"><tspan x="403">Risk-taking</tspan><tspan x="403" dy="34">incentives</tspan></text>
+<text x="676" y="347" class="main"><tspan x="676">Subsequent</tspan><tspan x="676" dy="34">risk-taking</tspan></text>
+</svg>

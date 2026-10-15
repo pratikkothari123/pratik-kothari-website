@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="The five categories entering director quality: higher education, creativity, experience, talent, and social capital.">
+<rect width="700" height="520" fill="white"/>
+<path d="M350 260 L350.000 18.000 A242 242 0 0 1 580.156 185.218 Z" fill="#365b70" stroke="white" stroke-width="2.5"/>
+<path d="M350 260 L580.156 185.218 A242 242 0 0 1 492.244 455.782 Z" fill="#5c7b8d" stroke="white" stroke-width="2.5"/>
+<path d="M350 260 L492.244 455.782 A242 242 0 0 1 207.756 455.782 Z" fill="#927340" stroke="white" stroke-width="2.5"/>
+<path d="M350 260 L207.756 455.782 A242 242 0 0 1 119.844 185.218 Z" fill="#537c65" stroke="white" stroke-width="2.5"/>
+<path d="M350 260 L119.844 185.218 A242 242 0 0 1 350.000 18.000 Z" fill="#74867b" stroke="white" stroke-width="2.5"/>
+<g font-family="Arial, sans-serif" font-size="27" fill="white" text-anchor="middle">
+<text x="438" y="142"><tspan x="438">(Higher)</tspan><tspan x="438" dy="32">Education</tspan></text>
+<text x="496" y="308">Creativity</text>
+<text x="350" y="441">Experience</text>
+<text x="203" y="308">Talent</text>
+<text x="261" y="142"><tspan x="261">Social</tspan><tspan x="261" dy="32">Capital</tspan></text>
+</g></svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="450" viewBox="0 0 700 450" role="img" aria-labelledby="motives-title motives-desc">
+  <title id="motives-title">Six motives for corporate giving</title>
+  <desc id="motives-desc">A conceptual diagram connecting corporate giving to impact maximization, strategic investment, stakeholder management, institutional responsibility, risk mitigation, and values expression. The diagram does not encode estimated magnitudes.</desc>
+  <g fill="none" stroke="#bccbd4" stroke-width="2">
+    <path d="M350 225 L125 82 M350 225 L575 82 M350 225 H125 M350 225 H575 M350 225 L125 368 M350 225 L575 368"/>
+  </g>
+  <g fill="#edf3f6">
+    <rect x="4" y="34" width="242" height="96" rx="28"/>
+    <rect x="454" y="34" width="242" height="96" rx="28"/>
+    <rect x="4" y="177" width="242" height="96" rx="28"/>
+    <rect x="454" y="177" width="242" height="96" rx="28"/>
+    <rect x="4" y="320" width="242" height="96" rx="28"/>
+    <rect x="454" y="320" width="242" height="96" rx="28"/>
+  </g>
+  <circle cx="350" cy="225" r="85" fill="#365b70"/>
+  <g fill="#304c5d" font-family="Segoe UI, Arial, sans-serif" font-size="28.5" font-weight="400" text-anchor="middle">
+    <text x="125" y="73"><tspan x="125">Impact</tspan><tspan x="125" dy="34">maximization</tspan></text>
+    <text x="575" y="73"><tspan x="575">Strategic</tspan><tspan x="575" dy="34">investment</tspan></text>
+    <text x="125" y="216"><tspan x="125">Stakeholder</tspan><tspan x="125" dy="34">management</tspan></text>
+    <text x="575" y="216"><tspan x="575">Institutional</tspan><tspan x="575" dy="34">responsibility</tspan></text>
+    <text x="125" y="359"><tspan x="125">Risk</tspan><tspan x="125" dy="34">mitigation</tspan></text>
+    <text x="575" y="359"><tspan x="575">Values</tspan><tspan x="575" dy="34">expression</tspan></text>
+  </g>
+  <text x="350" y="215" text-anchor="middle" fill="#ffffff" font-family="Georgia, serif" font-size="29"><tspan x="350">Corporate</tspan><tspan x="350" dy="36">giving</tspan></text>
+</svg>

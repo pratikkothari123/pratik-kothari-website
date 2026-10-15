@@ -1,0 +1,43 @@
+/* Approved dataset cards and explorer; registration remains in downloads.js. */
+.data-page .page-header { padding: 34px 0 18px; }
+.data-page .page-header h1 { font-size: 2.8rem; margin: 4px 0 12px; }
+.data-layout { grid-template-columns: minmax(0, 1fr) 340px; gap: 48px; padding-top: 5px; }
+.dataset-heading { display: flex; justify-content: space-between; gap: 20px; align-items: start; margin-bottom: 17px; }
+.data-card-title { font-size: 1.75rem; margin: 0; line-height: 1.25; }
+.dataset-get { flex-shrink: 0; border: 1px solid #b7c1c7; border-radius: 3px; background: #fff; color: #365b70; padding: 7px 12px; font-size: .75rem; }
+.dataset-get:hover { background: #f1f4f6; }
+.data-description { font-size: .875rem; }
+.dataset-meta { margin: 16px 0 21px; font-size: .6875rem; gap: 8px 20px; }
+.data-note { font-size: .75rem; }
+.access-card { padding: 24px; border-top: 1px solid #ccd4d9; box-shadow: none; border-radius: 3px; scroll-margin-top: 25px; }
+.access-card:focus-within { border-color: #7894a6; }
+.access-card h2 { margin-top: 0; }
+.access-card .success-icon { display: none; }
+.download-success .button { background: #365b70; }
+.sector-control { display: flex; gap: 14px; align-items: center; margin: 6px 0 4px; }
+.sector-control label { font-size: .75rem; color: #58656f; }
+.sector-control select { background: #fff; color: #242424; padding: 7px 25px 7px 10px; border: 1px solid #c8d0d5; border-radius: 3px; font-size: .75rem; max-width: 190px; }
+.sector-chart { position: relative; min-height: 238px; }
+.score-svg { display: block; width: 100%; overflow: visible; }
+.score-svg text { font: 400 11px var(--font-body); fill: #596772; }
+.score-svg .score-axis { stroke: #c3ccd2; }
+.score-svg .score-grid { stroke: #e3e8eb; }
+.score-tooltip { position: absolute; pointer-events: none; top: 2px; right: 0; background: #fff; color: #365b70; border: 1px solid #d5dde2; border-radius: 3px; padding: 5px 9px; font-size: .6875rem; font-variant-numeric: tabular-nums; }
+.score-chart-status { color: var(--color-text-secondary); font-size: .75rem; padding: 24px 0; }
+.chart-screen-reader { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 900px) {
+  .data-layout { grid-template-columns: minmax(0, 1fr) 300px; gap: 28px; }
+  .dataset-heading { flex-wrap: wrap; gap: 12px; }
+}
+@media (max-width: 760px) {
+  .data-layout { grid-template-columns: 1fr; gap: 35px; }
+  .dataset-heading { flex-wrap: nowrap; }
+  .data-card-title { font-size: 1.5rem; }
+  .data-citation-note { font-size: .8125rem; }
+  .sector-control select { font-size: 1rem; }
+  .dataset-get, .sector-control select { min-height: 44px; }
+}
+@media print {
+  .data-layout { display: block; }
+  .dataset-get, .score-tooltip { display: none; }
+}
