@@ -17,8 +17,9 @@ sector-score CSV.
 The form requires email, name, institution, and the desired dataset. Each saved
 form submission is treated as a download record. There is no update-email
 checkbox and this implementation does not send emails.
-The CREATE entry includes a paper-citation notice, matching the tax dataset's
-wording. There is no citation checkbox or repeated notice in the download flow.
+One page-level note asks researchers to cite the website and the associated
+paper. Each dataset description links to its paper. There is no citation
+checkbox or repeated notice in the download flow.
 
 ## Connect a private Google Sheet
 
