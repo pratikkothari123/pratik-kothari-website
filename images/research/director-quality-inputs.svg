@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="430" viewBox="0 0 700 430" role="img" aria-label="Higher education, creativity, experience, talent, and social capital feed into the director-quality measure.">
+<title>Components of director quality</title>
+<desc>Five categories from the FMA 2024 presentation converge on director quality. The diagram shows components, not empirical weights.</desc>
+<defs>
+  <marker id="dq-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L8 5 1 9" fill="none" stroke="#365b70" stroke-width="1.5" stroke-linejoin="round"/></marker>
+  <marker id="dq-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L8 5 1 9" fill="none" stroke="#5c7b8d" stroke-width="1.5" stroke-linejoin="round"/></marker>
+  <marker id="dq-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L8 5 1 9" fill="none" stroke="#927340" stroke-width="1.5" stroke-linejoin="round"/></marker>
+  <marker id="dq-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L8 5 1 9" fill="none" stroke="#537c65" stroke-width="1.5" stroke-linejoin="round"/></marker>
+  <marker id="dq-sage" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L8 5 1 9" fill="none" stroke="#74867b" stroke-width="1.5" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="700" height="430" fill="white"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" font-size="29" stroke-linecap="round">
+  <circle cx="350" cy="224" r="106" fill="#f0f4f5"/>
+  <circle cx="350" cy="224" r="88" fill="#365b70"/>
+  <g fill="white" font-size="31"><text x="350" y="216">Director</text><text x="350" y="253">quality</text></g>
+  <g fill="none" stroke-width="2.8">
+    <path d="M350 94V128" stroke="#365b70" marker-end="url(#dq-blue)"/>
+    <path d="M523 172L442 199" stroke="#5c7b8d" marker-end="url(#dq-slate)"/>
+    <path d="M475 340L417 294" stroke="#927340" marker-end="url(#dq-gold)"/>
+    <path d="M225 340L283 294" stroke="#537c65" marker-end="url(#dq-green)"/>
+    <path d="M177 172L258 199" stroke="#74867b" marker-end="url(#dq-sage)"/>
+  </g>
+  <g fill="#365b70"><circle cx="350" cy="94" r="5"/><text x="350" y="40">(Higher)</text><text x="350" y="73">Education</text></g>
+  <g fill="#5c7b8d"><circle cx="523" cy="172" r="5"/><text x="578" y="145">Creativity</text></g>
+  <g fill="#927340"><circle cx="475" cy="340" r="5"/><text x="525" y="382">Experience</text></g>
+  <g fill="#537c65"><circle cx="225" cy="340" r="5"/><text x="175" y="382">Talent</text></g>
+  <g fill="#74867b"><circle cx="177" cy="172" r="5"/><text x="113" y="119">Social</text><text x="113" y="152">Capital</text></g>
+</g></svg>

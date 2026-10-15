@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" viewBox="0 0 700 420" role="img" aria-label="Relative contributions to director quality: experience 45.75 percent, creativity 41.57 percent, talent 7.64 percent, social capital 4.97 percent, and education 0.07 percent.">
+<title>Relative contributions to director quality</title>
+<desc>Five category totals from the FMA 2024 presentation. These are shares of the sum of squared factor loadings in the director-quality measure, not effects on accounting outcomes. Every bar uses the same zero-based scale.</desc>
+<rect width="700" height="420" fill="white"/>
+<g font-family="Arial, sans-serif" font-size="27" fill="#365b70">
+  <g stroke="#e4e9e7" stroke-width="1">
+    <path d="M317 24V337M389 24V337M461 24V337M533 24V337M605 24V337"/>
+  </g>
+  <path d="M245 24V337H605" fill="none" stroke="#bcc9c8" stroke-width="1.2"/>
+  <g text-anchor="end">
+    <text x="225" y="67">Experience</text>
+    <text x="225" y="129">Creativity</text>
+    <text x="225" y="191">Talent</text>
+    <text x="225" y="253">Social capital</text>
+    <text x="225" y="315">Education</text>
+  </g>
+  <rect x="245" y="39" width="329.4" height="38" fill="#927340"/>
+  <rect x="245" y="101" width="299.304" height="38" fill="#5c7b8d"/>
+  <rect x="245" y="163" width="55.008" height="38" fill="#537c65"/>
+  <rect x="245" y="225" width="35.784" height="38" fill="#74867b"/>
+  <rect x="245" y="287" width="0.504" height="38" fill="#365b70"/>
+  <g font-size="24">
+    <text x="586.4" y="66">45.75%</text>
+    <text x="556.304" y="128">41.57%</text>
+    <text x="312.008" y="190">7.64%</text>
+    <text x="292.784" y="252">4.97%</text>
+    <text x="257.504" y="314">0.07%</text>
+  </g>
+  <g text-anchor="middle" font-size="20" fill="#596772">
+    <text x="245" y="365">0%</text>
+    <text x="317" y="365">10%</text>
+    <text x="389" y="365">20%</text>
+    <text x="461" y="365">30%</text>
+    <text x="533" y="365">40%</text>
+    <text x="605" y="365">50%</text>
+  </g>
+  <text x="425" y="405" text-anchor="middle" font-size="24">Contribution to director quality (%)</text>
+</g></svg>
