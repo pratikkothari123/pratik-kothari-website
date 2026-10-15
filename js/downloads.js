@@ -83,7 +83,7 @@
     document.getElementById('success-title').textContent = dataset.name;
     document.getElementById('success-message').textContent = preview
       ? 'Preview complete. No information was sent or saved. These links download the actual dataset files.'
-      : 'Thank you for introducing yourself. Your registration has been saved. Download your selected files below.';
+      : 'Download your files below.';
     panel.hidden = true;
     success.hidden = false;
     document.getElementById('success-title').focus();
